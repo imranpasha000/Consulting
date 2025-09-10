@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import { ArrowRight, Building2, Users, Calculator, FileText, Shield, Clock } from 'lucide-react';
 import CarouselBanner from '@/components/CarouselBanner';
+import { Button } from '@/components/ui/button';
 
 const HomePage = () => {
   return (
@@ -9,10 +9,10 @@ const HomePage = () => {
 
       {/* Featured Carousel */}
       <section className="py-4 bg-white">
-          <CarouselBanner />
+        <CarouselBanner />
       </section>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
+      <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -22,12 +22,12 @@ const HomePage = () => {
               CharteredHelp provides comprehensive business solutions from company registration to ongoing compliance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/company-registration" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+              <Button href="/company-registration" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                 Start Your Business
-              </Link>
-              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+              </Button>
+              <Button href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                 Get Consultation
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -120,13 +120,13 @@ const HomePage = () => {
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                   When it comes to paying employees, laws and the IRS have made the payroll function a time consuming nightmare for the small business owner.
                 </p>
-                <Link
+                <Button
                   href="/services/payroll"
                   className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -141,13 +141,13 @@ const HomePage = () => {
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                   Small business owners spend an average of eight hours a month performing payroll functions. That&apos;s 12 full days a year that could be spent generating sales, prospecting new business opportunities, improving products or services, or servicing customers.
                 </p>
-                <Link
+                <Button
                   href="/services/payroll"
                   className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                </Button>
               </div>
               <div className="relative h-64 lg:h-auto order-1 lg:order-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600">
@@ -181,12 +181,12 @@ const HomePage = () => {
             Get expert guidance and comprehensive solutions for all your business needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+            <Button href="/contact" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
               Get Free Consultation
-            </Link>
-            <Link href="/services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+            </Button>
+            <Button href="/services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
               View All Services
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

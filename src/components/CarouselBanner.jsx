@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Button } from "./ui/button";
 
 const bannerSlides = [
   {
@@ -36,6 +37,9 @@ const bannerSlides = [
 ];
 
 const CarouselBanner = () => {
+  // Import your Button component at the top of the file:
+  // import { Button } from "@/components/ui/button";
+
   return (
     <Carousel className="w-full overflow-hidden h-[100vh]">
       <CarouselContent className="h-full">
@@ -54,12 +58,14 @@ const CarouselBanner = () => {
               <div className="relative z-10 max-w-2xl mx-auto text-center px-4">
                 <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">{slide.title}</h2>
                 <p className="text-lg md:text-2xl text-blue-100 mb-6 drop-shadow">{slide.description}</p>
-                <a
-                  href={slide.cta.href}
-                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
+                <Button
+                  asChild
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
                 >
-                  {slide.cta.label}
-                </a>
+                  <a href={slide.cta.href}>
+                    {slide.cta.label}
+                  </a>
+                </Button>
               </div>
             </div>
           </CarouselItem>

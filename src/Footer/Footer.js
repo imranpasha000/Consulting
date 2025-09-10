@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram, Youtube, MessageCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
@@ -14,12 +15,16 @@ const Footer = () => {
             <p className="text-gray-300 leading-relaxed">
               We are helping Start-ups in Company Registration and also providing ONE STOP SOLUTION for all after company registration compliance
             </p>
-            <Link
-              href="/about"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300"
+            <Button
+              size="sm"
+              variant="outline"
+              className={"border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-300 bg-blue-900"}
+              asChild
             >
-              READ MORE
-            </Link>
+              <Link href="/about">
+                READ MORE
+              </Link>
+            </Button>
           </div>
 
           {/* Contact Info Section */}
