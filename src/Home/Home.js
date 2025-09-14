@@ -3,6 +3,7 @@ import { ArrowRight, Building2, Users, Calculator, FileText, Shield, Clock } fro
 import CarouselBanner from '@/components/CarouselBanner';
 import { Button } from '@/components/ui/button';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import BlogSlider from '@/components/BlogSlider';
 
 const HomePage = () => {
   return (
@@ -195,6 +196,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+      <BlogSlider />
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
