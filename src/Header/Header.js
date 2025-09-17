@@ -40,9 +40,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <div className="text-2xl font-bold">
-                <span className="text-blue-600">Bilal & </span>
-                <span className="text-orange-500">Co.</span>
-                <span className="text-xs text-gray-500 ml-1">®</span>
+                <img src="/logo11.jpeg" alt="logo" className="w-52 h-22" />
               </div>
             </Link>
           </div>

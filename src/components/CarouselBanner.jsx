@@ -37,14 +37,25 @@ const bannerSlides = [
 ];
 
 const CarouselBanner = () => {
-  // Import your Button component at the top of the file:
-  // import { Button } from "@/components/ui/button";
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Carousel className="w-full overflow-hidden h-[100vh]">
       <CarouselContent className="h-full">
         {bannerSlides.map((slide, index) => (
-          <CarouselItem key={index} className="h-full w-full">
+          <CarouselItem
+            key={index}
+            className={`h-full w-full transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0 absolute'
+              }`}
+          >
             <div
               className="relative w-full h-full flex items-center justify-center"
               style={{
