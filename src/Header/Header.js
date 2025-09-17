@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Search, Building2, FileText, Calculator, Briefcase, Shield, Users, Award } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 
 const Header = () => {
@@ -39,8 +40,15 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold">
-                <img src="/logo11.jpeg" alt="logo" className="w-52 h-22" />
+              <div className="h-16 flex items-center">
+                <Image
+                  src="/logo11.jpeg"
+                  alt="logo"
+                  width={208}
+                  height={48}
+                  priority
+                  className="h-16 w-auto object-contain mix-blend-multiply"
+                />
               </div>
             </Link>
           </div>
