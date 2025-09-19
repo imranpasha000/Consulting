@@ -40,16 +40,16 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-16 flex items-center">
+              {/* <div className="flex items-center h-16 w-52">
                 <Image
-                  src="/logo11.jpeg"
+                  src=""
                   alt="logo"
                   width={208}
                   height={48}
                   priority
-                  className="h-16 w-auto object-contain mix-blend-multiply"
+                  className="object-contain mix-blend-multiply bg-transparent"
                 />
-              </div>
+              </div> */}
             </Link>
           </div>
 

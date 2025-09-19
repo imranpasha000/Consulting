@@ -18,7 +18,7 @@ export const metadata = {
   title: "Bilal & Co",
   description: "Your Trusted Partner for Business Solutions",
   icons: {
-    icon: "/HindiFilings.ico",
+    icon: "/favicon.ico",
   },
 };
 
