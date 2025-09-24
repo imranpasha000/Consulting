@@ -5,9 +5,9 @@ import { Button } from "./ui/button";
 
 const bannerSlides = [
   {
-    title: "Start Your Business Effortlessly",
-    description: "Company registration, GST, and compliance made easy with CharteredHelp.",
-    image: "/banner/1.png",
+    title: "",
+    description: "",
+    image: "/banner/New1.webp",
     cta: { label: "Get Started", href: "/company-registration" }
   },
   {
@@ -42,49 +42,57 @@ const CarouselBanner = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
-    }, 4000); // Change slide every 4 seconds
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <Carousel className="w-full overflow-hidden h-[100vh]">
-      <CarouselContent className="h-full">
-        {bannerSlides.map((slide, index) => (
-          <CarouselItem
-            key={index}
-            className={`h-full w-full transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0 absolute'
-              }`}
-          >
-            <div
-              className="relative w-full h-full flex items-center justify-center"
-              style={{
-                backgroundImage: `url(${encodeURI(slide.image)})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100vh"
-              }}
+  <CarouselContent className="h-full">
+    {bannerSlides.map((slide, index) => (
+      <CarouselItem
+        key={index}
+        className={`h-full w-full transition-opacity duration-3000 ${
+          index === currentSlide ? "opacity-100" : "opacity-0 absolute"
+        }`}
+      >
+        <div
+          className="relative w-full h-full flex items-end justify-center pb-16"
+          style={{
+            backgroundImage: `url(${encodeURI(slide.image)})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "100vh",
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40" />
+
+          {/* Text + Button */}
+          <div className="relative z-10 max-w-2xl mx-auto text-center px-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+              {slide.title}
+            </h2>
+            <p className="text-lg md:text-2xl text-blue-100 mb-6 drop-shadow">
+              {slide.description}
+            </p>
+            <Button
+              asChild
+              className="bg-blue-900 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
             >
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="relative z-10 max-w-2xl mx-auto text-center px-4">
-                <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">{slide.title}</h2>
-                <p className="text-lg md:text-2xl text-blue-100 mb-6 drop-shadow">{slide.description}</p>
-                <Button
-                  asChild
-                  className="bg-blue-900 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
-                >
-                  <a href={slide.cta.href}>
-                    {slide.cta.label}
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white shadow rounded-full" />
-      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white shadow rounded-full" />
-    </Carousel>
+              <a href={slide.cta.href}>{slide.cta.label}</a>
+            </Button>
+          </div>
+        </div>
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+
+  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white shadow rounded-full" />
+  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white shadow rounded-full" />
+</Carousel>
+
   );
 };
 
