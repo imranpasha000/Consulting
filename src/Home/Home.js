@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSlider from "@/components/BlogSlider";
 import AboutSection from "@/components/AboutSection";
+import WhyWeAreBest from "@/components/WhyWeAreBest";
 
 const services = [
   {
@@ -80,7 +81,7 @@ const HomePage = () => {
               subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
               description="At our firm in Noida, our Chartered Accountants (CAs) are dedicated to providing comprehensive services that include Company Registration, GST Registration, and ITR Filing. As one of the leading CA firms in Noida, we take pride in upholding the highest ethical standards, ensuring transparency in all our dealings."
               experienceYears="10"
-              image="/banner/New1.jpg"
+              image="/Images/1.webp"
               buttonText="READ MORE"
               buttonLink="/about"
             />
@@ -134,6 +135,13 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <WhyWeAreBest />
+          </div>
+
       </section>
 
       {/* Payroll Services Section */}
