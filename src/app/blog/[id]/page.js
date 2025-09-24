@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${post.title} - Bilal & Co. Blog`,
+    title: `${post.title} - Hind Filings Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -134,7 +134,7 @@ const BlogPostPage = ({ params }) => {
         <div className="mt-12 p-6 bg-white rounded-xl shadow-sm border border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">About the Author</h3>
           <p className="text-gray-600 leading-relaxed">
-            Our expert team at Bilal & Co. brings years of experience in business registration, compliance, and legal matters. We're dedicated to helping entrepreneurs and businesses navigate the complex world of corporate law and regulations.
+            Our expert team at Hind Filings brings years of experience in business registration, compliance, and legal matters. We're dedicated to helping entrepreneurs and businesses navigate the complex world of corporate law and regulations.
           </p>
         </div>
       </article>

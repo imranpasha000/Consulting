@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Bilal & Co",
+  title: "Hind Filings",
   description: "Your Trusted Partner for Business Solutions",
   icons: {
     icon: "/favicon.ico",

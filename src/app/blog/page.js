@@ -3,7 +3,7 @@ import { blogPosts } from '@/data/blogData';
 import BlogCard from '@/components/BlogCard';
 
 export const metadata = {
-  title: 'Blog - Bilal & Co.',
+  title: 'Blog - Hind Filings',
   description: 'Latest insights, guides, and updates on business registration, compliance, and legal matters.',
 };
 

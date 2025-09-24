@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Company Info */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white mb-4">Bilal & Co.</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Hind Filings</h3>
               <p className="text-gray-300 leading-relaxed">
                 We are helping Start-ups in Company Registration and also providing ONE STOP SOLUTION for all after company registration compliance
               </p>
@@ -59,10 +59,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
                   <Link
-                    href="mailto:Help@Bilal & Co..Com"
+                    href="mailto:Help@Hind Filings.Com"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Help@Bilal & Co..Com
+                    Help@Hind Filings.Com
                   </Link>
                 </div>
 
