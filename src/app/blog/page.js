@@ -39,12 +39,12 @@ const BlogPage = () => {
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
-                {['All', 'Company Registration', 'GST', 'Income Tax', 'Trademark', 'FSSAI', 'Import Export'].map((category) => (
+                {["All", "Company Registration", "GST", "Income Tax", "Trademark", "FSSAI", "Import Export"].map((category) => (
                   <button
                     key={category}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${category === 'All'
-                      ? 'bg-blue-900 text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-900 border border-gray-200'
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${category === "All"
+                      ? "bg-blue-900 text-white"
+                      : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-900 border border-gray-200"
                       }`}
                   >
                     {category}

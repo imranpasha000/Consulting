@@ -177,7 +177,7 @@ const Header = () => {
                             </div>
                             <div>
                               <h4 className="font-bold text-base">Complete Business Solutions</h4>
-                              <p className="text-xs opacity-90">From registration to compliance - we've got you covered!</p>
+                              <p className="text-xs opacity-90">From registration to compliance - we&apos;ve got you covered!</p>
                             </div>
                           </div>
 

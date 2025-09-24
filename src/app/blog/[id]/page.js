@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowLeft, Share2 } from 'lucide-react';
 import Link from 'next/link';
@@ -102,10 +103,13 @@ const BlogPostPage = ({ params }) => {
 
         {/* Featured Image */}
         <div className="mb-8">
-          <img
+          <Image
             src={post.image}
             alt={post.title}
+            width={1200}
+            height={400}
             className="w-full h-96 object-cover rounded-xl shadow-lg"
+            priority
           />
         </div>
 
@@ -134,7 +138,7 @@ const BlogPostPage = ({ params }) => {
         <div className="mt-12 p-6 bg-white rounded-xl shadow-sm border border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">About the Author</h3>
           <p className="text-gray-600 leading-relaxed">
-            Our expert team at Hind Filings brings years of experience in business registration, compliance, and legal matters. We're dedicated to helping entrepreneurs and businesses navigate the complex world of corporate law and regulations.
+            Our expert team at Hind Filings brings years of experience in business registration, compliance, and legal matters. We&apos;re dedicated to helping entrepreneurs and businesses navigate the complex world of corporate law and regulations.
           </p>
         </div>
       </article>
