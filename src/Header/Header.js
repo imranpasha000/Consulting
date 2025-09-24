@@ -58,14 +58,14 @@ const Header = () => {
             <NavigationMenuList className="flex space-x-1">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                  <Link href="/" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
                     Home
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
                   Company Registration
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -80,22 +80,22 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Incorporation</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/company-registration/private-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/private-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Private Limited Company
                           </Link>
-                          <Link href="/company-registration/llp" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/llp" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             LLP Registration
                           </Link>
-                          <Link href="/company-registration/one-person" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/one-person" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             One Person Company
                           </Link>
-                          <Link href="/company-registration/public-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/public-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Public Limited Company
                           </Link>
-                          <Link href="/company-registration/section-8" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/section-8" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Section 8 Company
                           </Link>
-                          <Link href="/company-registration/business-license" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/company-registration/business-license" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Business Registration License
                           </Link>
                         </div>
@@ -110,22 +110,22 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Compliance</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/compliance/din-kyc" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/din-kyc" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Director DIN e KYC Update
                           </Link>
-                          <Link href="/compliance/appoint-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/appoint-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Appointment of Director
                           </Link>
-                          <Link href="/compliance/remove-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/remove-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Removal of Director
                           </Link>
-                          <Link href="/compliance/winding-up" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/winding-up" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Pvt. Ltd. Winding up
                           </Link>
-                          <Link href="/compliance/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Increase Authorized Capital
                           </Link>
-                          <Link href="/compliance/change-office" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/change-office" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Registered Office Change
                           </Link>
                         </div>
@@ -140,19 +140,19 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Conversion</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/conversion/opc-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/conversion/opc-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             OPC to PVT. Conversion
                           </Link>
-                          <Link href="/conversion/pvt-to-public" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/conversion/pvt-to-public" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             PVT. to Public Ltd Conversion
                           </Link>
-                          <Link href="/conversion/llp-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/conversion/llp-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             LLP to PVT Conversion
                           </Link>
-                          <Link href="/conversion/section-8-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/conversion/section-8-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Sec-8 Winding Up
                           </Link>
-                          <Link href="/conversion/nidhi-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/conversion/nidhi-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Nidhi Winding Up
                           </Link>
                         </div>
@@ -161,7 +161,7 @@ const Header = () => {
 
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-2 right-4 w-16 h-16 bg-white rounded-full"></div>
@@ -197,7 +197,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
                   GST Registration
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -212,25 +212,25 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">GST</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/gst/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST Registration
                           </Link>
-                          <Link href="/gst/return-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/return-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST Return Filing
                           </Link>
-                          <Link href="/gst/nil-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/nil-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST Nil Return Filing
                           </Link>
-                          <Link href="/gst/modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST Modification
                           </Link>
-                          <Link href="/gst/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GSTR-9 Annual Filing
                           </Link>
-                          <Link href="/gst/lut-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/lut-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST LUT Filing
                           </Link>
-                          <Link href="/gst/eway-bill" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/gst/eway-bill" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             GST E-Way Bill
                           </Link>
                         </div>
@@ -245,28 +245,28 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Annual Compliances & Others</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/compliance/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Annual Compliance & Filing
                           </Link>
-                          <Link href="/compliance/bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Annual Compliance & Bookkeeping
                           </Link>
-                          <Link href="/tax/tax-planning" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/tax/tax-planning" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Tax Planning & Consultancy
                           </Link>
-                          <Link href="/services/online-bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/online-bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Online Bookkeeping
                           </Link>
-                          <Link href="/ngo/12a-80g" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/ngo/12a-80g" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             12A-80G-CSR
                           </Link>
-                          <Link href="/services/project-report" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/project-report" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Project Report
                           </Link>
-                          <Link href="/compliance/dpt-3" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/compliance/dpt-3" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             DPT-3 Filing
                           </Link>
-                          <Link href="/ngo/darpan" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/ngo/darpan" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             NGO DARPAN Registration
                           </Link>
                         </div>
@@ -281,10 +281,10 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Payroll Compliance</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/payroll/pf-esic-registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/payroll/pf-esic-registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             PF-ESIC Registration
                           </Link>
-                          <Link href="/payroll/pf-esic-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/payroll/pf-esic-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             PF-ESIC Return Filing
                           </Link>
                         </div>
@@ -293,7 +293,7 @@ const Header = () => {
 
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-3 right-6 w-12 h-12 bg-white rounded-full"></div>
@@ -333,7 +333,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
                   ITR Filing
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -348,19 +348,19 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Individual Tax</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/itr/individual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/individual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Individual ITR Filing
                           </Link>
-                          <Link href="/itr/salaried" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/salaried" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Salaried ITR Filing
                           </Link>
-                          <Link href="/itr/business-individual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/business-individual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Business Individual ITR
                           </Link>
-                          <Link href="/itr/capital-gains" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/capital-gains" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Capital Gains ITR
                           </Link>
-                          <Link href="/itr/foreign-income" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/foreign-income" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Foreign Income ITR
                           </Link>
                         </div>
@@ -375,19 +375,19 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Business Tax</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/itr/business" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/business" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Business ITR Filing
                           </Link>
-                          <Link href="/itr/tds-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/tds-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             TDS Return Filing
                           </Link>
-                          <Link href="/itr/audit" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/audit" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Tax Audit
                           </Link>
-                          <Link href="/itr/advance-tax" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/advance-tax" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Advance Tax
                           </Link>
-                          <Link href="/itr/tax-planning" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/itr/tax-planning" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Tax Planning
                           </Link>
                         </div>
@@ -396,7 +396,7 @@ const Header = () => {
 
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-4 right-8 w-14 h-14 bg-white rounded-full"></div>
@@ -437,7 +437,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
                   Other Registration
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -452,25 +452,25 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Trademark</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/trademark/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Trademark Registration
                           </Link>
-                          <Link href="/trademark/renewal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/renewal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Trademark Renewal
                           </Link>
-                          <Link href="/trademark/objection" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/objection" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Trademark Objection
                           </Link>
-                          <Link href="/trademark/opposition" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/opposition" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Trademark Opposition
                           </Link>
-                          <Link href="/trademark/assignment" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/assignment" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Trademark Assignment
                           </Link>
-                          <Link href="/trademark/logo-design" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/logo-design" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Logo Design
                           </Link>
-                          <Link href="/trademark/series" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/trademark/series" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Series Trademark
                           </Link>
                         </div>
@@ -485,7 +485,7 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Copyright</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/copyright/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/copyright/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Copyright Registration
                           </Link>
                         </div>
@@ -500,25 +500,25 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Licenses</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/licenses/fssai" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/fssai" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             FSSAI Registration
                           </Link>
-                          <Link href="/licenses/fssai-renewal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/fssai-renewal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             FSSAI Renewal
                           </Link>
-                          <Link href="/licenses/fssai-modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/fssai-modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             FSSAI Modification
                           </Link>
-                          <Link href="/licenses/import-export" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/import-export" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Import Export Code
                           </Link>
-                          <Link href="/licenses/iec-modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/iec-modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Import Export Code Modification
                           </Link>
-                          <Link href="/licenses/fssai-annual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/fssai-annual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             FSSAI Annual Return Filing
                           </Link>
-                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             BIS Certificate
                           </Link>
                         </div>
@@ -527,7 +527,7 @@ const Header = () => {
 
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-2 right-4 w-18 h-18 bg-white rounded-full"></div>
@@ -568,7 +568,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600">
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
                   Other Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -583,22 +583,22 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Professional Services</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/services/accounting" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/accounting" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Accounting Services
                           </Link>
-                          <Link href="/services/audit" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/audit" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Audit Services
                           </Link>
-                          <Link href="/services/legal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/legal" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Legal Services
                           </Link>
-                          <Link href="/services/consultation" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/consultation" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Business Consultation
                           </Link>
-                          <Link href="/services/bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Online Bookkeeping
                           </Link>
-                          <Link href="/services/payroll" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/payroll" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Payroll Management
                           </Link>
                         </div>
@@ -613,22 +613,22 @@ const Header = () => {
                           <h3 className="font-bold text-gray-900 text-base">Specialized Services</h3>
                         </div>
                         <div className="space-y-2">
-                          <Link href="/services/iso-certification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/iso-certification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             ISO Certification
                           </Link>
-                          <Link href="/services/project-report" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/project-report" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Project Report
                           </Link>
-                          <Link href="/services/credit-analysis" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/credit-analysis" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Credit Management Analysis
                           </Link>
-                          <Link href="/services/jansamarth" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/jansamarth" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             JanSamarth Registration
                           </Link>
-                          <Link href="/services/consumer-dispute" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/consumer-dispute" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Consumer Dispute Resolution
                           </Link>
-                          <Link href="/services/online-dispute" className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors">
+                          <Link href="/services/online-dispute" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Online Dispute Resolution
                           </Link>
                         </div>
@@ -637,7 +637,7 @@ const Header = () => {
 
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-3 right-6 w-16 h-16 bg-white rounded-full"></div>
@@ -679,7 +679,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors">
+                  <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
                     Blog
                   </Link>
                 </NavigationMenuLink>
@@ -687,7 +687,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/contact" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                  <Link href="/contact" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
                     Contact
                   </Link>
                 </NavigationMenuLink>
@@ -697,7 +697,7 @@ const Header = () => {
 
           {/* Search Icon */}
           <div className="flex items-center" onMouseEnter={() => setIsSearchHover(true)} onMouseLeave={() => setIsSearchHover(false)}>
-            <button className="p-2 text-gray-500 hover:text-blue-600 transition-colors" onClick={openSearch} aria-expanded={showSearch} aria-controls="header-search-input">
+            <button className="p-2 text-gray-500 hover:text-blue-900 transition-colors" onClick={openSearch} aria-expanded={showSearch} aria-controls="header-search-input">
               <Search className="w-5 h-5" />
               <span className="sr-only">Search</span>
             </button>
@@ -705,7 +705,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button className="p-2 text-gray-500 hover:text-blue-600" onClick={() => setIsMobileOpen((v) => !v)} aria-expanded={isMobileOpen} aria-controls="mobile-menu">
+            <button className="p-2 text-gray-500 hover:text-blue-900" onClick={() => setIsMobileOpen((v) => !v)} aria-expanded={isMobileOpen} aria-controls="mobile-menu">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -820,7 +820,7 @@ const Header = () => {
                 id="header-search-input"
                 type="text"
                 placeholder="Search..."
-                className="flex-1 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
               />
             </div>
           </div>

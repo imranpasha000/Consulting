@@ -58,7 +58,7 @@ const BlogPostPage = ({ params }) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 transition-colors"
+            className="inline-flex items-center gap-2 text-blue-900 hover:text-blue-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Blog</span>
@@ -70,10 +70,10 @@ const BlogPostPage = ({ params }) => {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Category and Share */}
         <div className="flex justify-between items-center mb-6">
-          <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-medium">
             {post.category}
           </span>
-          <button className="flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors">
+          <button className="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors">
             <Share2 className="w-4 h-4" />
             <span>Share</span>
           </button>
@@ -111,7 +111,7 @@ const BlogPostPage = ({ params }) => {
 
         {/* Article Content */}
         <div
-          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:text-gray-700"
+          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-900 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:text-gray-700"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
@@ -122,7 +122,7 @@ const BlogPostPage = ({ params }) => {
             {post.tags.map((tag, index) => (
               <span
                 key={index}
-                className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm hover:bg-orange-100 hover:text-orange-700 transition-colors cursor-pointer"
+                className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-pointer"
               >
                 {tag}
               </span>
@@ -156,12 +156,12 @@ const BlogPostPage = ({ params }) => {
       )}
 
       {/* Newsletter CTA */}
-      <section className="bg-orange-500 py-16">
+      <section className="bg-blue-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated
           </h2>
-          <p className="text-xl text-orange-100 mb-8">
+          <p className="text-xl text-blue-100 mb-8">
             Subscribe to our newsletter for more insights and updates.
           </p>
 
@@ -171,7 +171,7 @@ const BlogPostPage = ({ params }) => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:outline-none"
             />
-            <button className="bg-white text-orange-500 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-blue-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
               Subscribe
             </button>
           </div>

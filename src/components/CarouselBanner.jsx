@@ -71,7 +71,7 @@ const CarouselBanner = () => {
                 <p className="text-lg md:text-2xl text-blue-100 mb-6 drop-shadow">{slide.description}</p>
                 <Button
                   asChild
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
+                  className="bg-blue-900 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow"
                 >
                   <a href={slide.cta.href}>
                     {slide.cta.label}

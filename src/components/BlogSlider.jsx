@@ -85,7 +85,7 @@ const BlogSlider = () => {
           {/* View All Blogs Link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+            className="inline-flex items-center gap-2 bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium"
           >
             <span>View All Blogs</span>
             <ArrowRight className="w-4 h-4" />
@@ -141,7 +141,7 @@ const BlogSlider = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'bg-orange-500 scale-125'
+                    ? 'bg-blue-900 scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -156,7 +156,7 @@ const BlogSlider = () => {
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               isAutoPlaying
-                ? 'bg-orange-500 text-white'
+                ? 'bg-blue-900 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >

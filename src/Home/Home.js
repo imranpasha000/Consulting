@@ -1,14 +1,21 @@
-import React from 'react';
-import { ArrowRight, Building2, Users, Calculator, FileText, Shield, Clock } from 'lucide-react';
-import CarouselBanner from '@/components/CarouselBanner';
-import { Button } from '@/components/ui/button';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import BlogSlider from '@/components/BlogSlider';
+import React from "react";
+import {
+  ArrowRight,
+  Building2,
+  Users,
+  Calculator,
+  FileText,
+  Shield,
+  Clock,
+} from "lucide-react";
+import CarouselBanner from "@/components/CarouselBanner";
+import { Button } from "@/components/ui/button";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import BlogSlider from "@/components/BlogSlider";
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-
       {/* Featured Carousel */}
       <section className="py-4 bg-white">
         <CarouselBanner />
@@ -21,21 +28,26 @@ const HomePage = () => {
               Your Business Growth Partner
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              CharteredHelp provides comprehensive business solutions from company registration to ongoing compliance
+              CharteredHelp provides comprehensive business solutions from
+              company registration to ongoing compliance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/company-registration" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+              <Button
+                href="/company-registration"
+                className="bg-blue-900 hover:bg-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              >
                 Start Your Business
               </Button>
-              <Button href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+              <Button
+                href="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              >
                 Get Consultation
               </Button>
             </div>
           </div>
         </div>
       </section>
-
-
 
       {/* Services Overview */}
       <section className="py-16 bg-white">
@@ -54,37 +66,47 @@ const HomePage = () => {
               {
                 icon: Building2,
                 title: "Company Registration",
-                description: "Register your company with expert guidance and hassle-free process"
+                description:
+                  "Register your company with expert guidance and hassle-free process",
               },
               {
                 icon: Calculator,
                 title: "GST Services",
-                description: "Complete GST registration, filing, and compliance management"
+                description:
+                  "Complete GST registration, filing, and compliance management",
               },
               {
                 icon: FileText,
                 title: "ITR Filing",
-                description: "Professional tax return filing and planning services"
+                description:
+                  "Professional tax return filing and planning services",
               },
               {
                 icon: Shield,
                 title: "Trademark & IP",
-                description: "Protect your brand with trademark and intellectual property services"
+                description:
+                  "Protect your brand with trademark and intellectual property services",
               },
               {
                 icon: Users,
                 title: "Payroll Services",
-                description: "Streamline your payroll process with our expert solutions"
+                description:
+                  "Streamline your payroll process with our expert solutions",
               },
               {
                 icon: Clock,
                 title: "Compliance",
-                description: "Stay compliant with all regulatory requirements"
-              }
+                description: "Stay compliant with all regulatory requirements",
+              },
             ].map((service, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
-                <service.icon className="w-12 h-12 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+              <div
+                key={index}
+                className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
+              >
+                <service.icon className="w-12 h-12 text-blue-900 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
@@ -99,7 +121,7 @@ const HomePage = () => {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative h-64 lg:h-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-pink-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-pink-500">
                   <div className="absolute inset-0 bg-black/20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-32 h-32 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center">
@@ -120,11 +142,13 @@ const HomePage = () => {
                   Company Name is licensed in VT and specializes in Payroll.
                 </h3>
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                  When it comes to paying employees, laws and the IRS have made the payroll function a time consuming nightmare for the small business owner.
+                  When it comes to paying employees, laws and the IRS have made
+                  the payroll function a time consuming nightmare for the small
+                  business owner.
                 </p>
                 <Button
                   href="/services/payroll"
-                  className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold text-lg transition-colors duration-300"
+                  className="inline-flex items-center text-blue-900 hover:text-blue-900 font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -141,18 +165,22 @@ const HomePage = () => {
                   Simplify your payroll.
                 </h3>
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                  Small business owners spend an average of eight hours a month performing payroll functions. That&apos;s 12 full days a year that could be spent generating sales, prospecting new business opportunities, improving products or services, or servicing customers.
+                  Small business owners spend an average of eight hours a month
+                  performing payroll functions. That&apos;s 12 full days a year
+                  that could be spent generating sales, prospecting new business
+                  opportunities, improving products or services, or servicing
+                  customers.
                 </p>
                 <Button
                   href="/services/payroll"
-                  className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold text-lg transition-colors duration-300"
+                  className="inline-flex items-center text-blue-900 hover:text-blue-900 font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
               <div className="relative h-64 lg:h-auto order-1 lg:order-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-indigo-600">
                   <div className="absolute inset-0 bg-black/20"></div>
                   {/* Tech/Digital theme */}
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -184,13 +212,21 @@ const HomePage = () => {
             Ready to Start Your Business Journey?
           </h2>
           <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
-            Get expert guidance and comprehensive solutions for all your business needs
+            Get expert guidance and comprehensive solutions for all your
+            business needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+            <Button
+              href="/contact"
+              className="bg-blue-900 text-white hover:bg-white border-2 hover:text-gray-900 border-blue-900 hover:border-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+            >
               Get Free Consultation
             </Button>
-            <Button href="/services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+
+            <Button
+              href="/services"
+              className="border-2 border-white text-gray-900 bg-white hover:bg-gray-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+            >
               View All Services
             </Button>
           </div>
@@ -208,10 +244,12 @@ const HomePage = () => {
               { number: "1000+", label: "Companies Registered" },
               { number: "500+", label: "Happy Clients" },
               { number: "50+", label: "Expert Team" },
-              { number: "24/7", label: "Support Available" }
+              { number: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index}>
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}

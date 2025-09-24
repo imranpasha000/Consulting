@@ -37,7 +37,7 @@ const Footer = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Contact Info</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-blue-900 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-300">
                       Sector 16, Noida,<br />
@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-900 flex-shrink-0" />
                   <Link
                     href="tel:+919266685656"
                     className="text-gray-300 hover:text-white transition-colors"
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-blue-900 flex-shrink-0" />
                   <Link
                     href="mailto:Help@Hind Filings.Com"
                     className="text-gray-300 hover:text-white transition-colors"
@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  <Clock className="w-5 h-5 text-blue-900 flex-shrink-0" />
                   <span className="text-gray-300">10:00 am - 8:00 pm</span>
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Footer = () => {
                 href="https://maps.google.com/?q=Sector+16,+Noida,+Uttar+Pradesh+201301"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors"
+                className="inline-flex items-center space-x-2 text-blue-900 hover:text-blue-300 transition-colors"
               >
                 <MapPin className="w-4 h-4" />
                 <span>View on Google Maps</span>
@@ -104,21 +104,21 @@ const Footer = () => {
                 href="/company-registration"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>Company Registration</span>
               </Link>
               <Link
                 href="/gst-registration"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>GST Registration</span>
               </Link>
               <Link
                 href="/itr-filing"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>ITR Filing</span>
               </Link>
             </div>
@@ -131,7 +131,7 @@ const Footer = () => {
                 href="/terms-conditions"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>Terms & Conditions</span>
               </Link>
 
@@ -139,7 +139,7 @@ const Footer = () => {
                 href="/privacy-policy"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>Privacy Policy</span>
               </Link>
 
@@ -147,7 +147,7 @@ const Footer = () => {
                 href="/refund-policy"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
               >
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200">▶</span>
+                <span className="text-blue-900 group-hover:translate-x-1 transition-transform duration-200">▶</span>
                 <span>Refund Policy</span>
               </Link>
             </div>
@@ -158,11 +158,11 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex justify-between">
                 <span>Monday - Friday</span>
-                <span className="text-orange-400">10:00 AM - 8:00 PM</span>
+                <span className="text-blue-900">10:00 AM - 8:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday</span>
-                <span className="text-orange-400">10:00 AM - 6:00 PM</span>
+                <span className="text-blue-900">10:00 AM - 6:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
@@ -186,7 +186,7 @@ const Footer = () => {
             <div className="flex space-x-3">
               <Link
                 href="#"
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-md flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-blue-900 hover:bg-blue-900 rounded-md flex items-center justify-center transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 text-white" />
@@ -194,7 +194,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-md flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-blue-900 hover:bg-blue-900 rounded-md flex items-center justify-center transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5 text-white" />
@@ -202,7 +202,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-md flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-blue-900 hover:bg-blue-900 rounded-md flex items-center justify-center transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-white" />
@@ -210,7 +210,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-md flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-blue-900 hover:bg-blue-900 rounded-md flex items-center justify-center transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-white" />
@@ -218,7 +218,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-md flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-blue-900 hover:bg-blue-900 rounded-md flex items-center justify-center transition-colors duration-300"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5 text-white" />

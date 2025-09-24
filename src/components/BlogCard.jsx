@@ -26,7 +26,7 @@ const BlogCard = ({ post, featured = false }) => {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-medium">
             {post.category}
           </span>
         </div>
@@ -34,7 +34,7 @@ const BlogCard = ({ post, featured = false }) => {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className={`font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors ${
+        <h3 className={`font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors ${
           featured ? 'text-xl' : 'text-lg'
         }`}>
           {post.title}
@@ -75,7 +75,7 @@ const BlogCard = ({ post, featured = false }) => {
         {/* Read More Link */}
         <Link
           href={`/blog/${post.id}`}
-          className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium transition-colors group/link"
+          className="inline-flex items-center gap-2 text-blue-900 hover:text-blue-700 font-medium transition-colors group/link"
         >
           <span>Read More</span>
           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

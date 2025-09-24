@@ -117,7 +117,7 @@ const Testimonials = () => {
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+            <div className="text-3xl font-bold text-blue-900 mb-2">500+</div>
             <div className="text-gray-600">Happy Clients</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md">
@@ -125,7 +125,7 @@ const Testimonials = () => {
             <div className="text-gray-600">Success Rate</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-blue-900 mb-2">24/7</div>
             <div className="text-gray-600">Support</div>
           </div>
         </div>
