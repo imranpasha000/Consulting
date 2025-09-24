@@ -12,6 +12,46 @@ import CarouselBanner from "@/components/CarouselBanner";
 import { Button } from "@/components/ui/button";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSlider from "@/components/BlogSlider";
+import AboutSection from "@/components/AboutSection";
+
+const services = [
+  {
+    icon: Building2,
+    title: "Company Registration",
+    description:
+      "There are many types of company registration in India. What type of company registration is best, in your case, is one of the most important.",
+  },
+  {
+    icon: Calculator,
+    title: "GST Registration",
+    description:
+      "GST (Goods & Services Tax) Registration is required in India for selling most of the goods and services in India.",
+  },
+  {
+    icon: FileText,
+    title: "ITR Filing",
+    description:
+      "ITR filing is mandatory if your income is above the threshold limit in India. ITR Filing for Salary Income, Business Income, Capital Gain, Interest Income etc.",
+  },
+  {
+    icon: Shield,
+    title: "Trademark Registration",
+    description:
+      "Trademark Registration is the best way to protect your brand name and logo in India.",
+  },
+  {
+    icon: Users,
+    title: "Accounting Services",
+    description:
+      "Accounting is the backbone of business. It is highly recommended for every business.",
+  },
+  {
+    icon: Clock,
+    title: "Auditing Services",
+    description:
+      "There are various types of audit applicability in India like Statutory Audit, Tax Audit, GST Audit etc.",
+  },
+];
 
 const HomePage = () => {
   return (
@@ -20,6 +60,50 @@ const HomePage = () => {
       <section className="py-4 bg-white">
         <CarouselBanner />
       </section>
+
+      {/* Services Overview */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What We Do
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Complete business solutions under one roof
+            </p>
+          </div>
+
+          <section>
+            <AboutSection
+              title="About HindFilings"
+              subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
+              description="At our firm in Noida, our Chartered Accountants (CAs) are dedicated to providing comprehensive services that include Company Registration, GST Registration, and ITR Filing. As one of the leading CA firms in Noida, we take pride in upholding the highest ethical standards, ensuring transparency in all our dealings."
+              experienceYears="10"
+              image="/banner/New1.jpg"
+              buttonText="READ MORE"
+              buttonLink="/about"
+            />
+          </section>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl border hover:shadow-xl transition duration-300"
+              >
+                <service.icon className="w-12 h-12 text-blue-700 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,88 +112,26 @@ const HomePage = () => {
               Your Business Growth Partner
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              CharteredHelp provides comprehensive business solutions from
-              company registration to ongoing compliance
+              HindFilings provides comprehensive business solutions from company
+              registration to ongoing compliance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="/company-registration"
-                className="bg-blue-900 hover:bg-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Start Your Business
-              </Button>
-              <Button
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Get Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+              <div className="flex gap-4 mt-6">
+                <Button
+                  href="/company-registration"
+                  className="bg-green-600 border-2 border-white text-white hover:bg-blue-800 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                >
+                  Start Your Business
+                </Button>
 
-      {/* Services Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Complete business solutions under one roof
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Building2,
-                title: "Company Registration",
-                description:
-                  "Register your company with expert guidance and hassle-free process",
-              },
-              {
-                icon: Calculator,
-                title: "GST Services",
-                description:
-                  "Complete GST registration, filing, and compliance management",
-              },
-              {
-                icon: FileText,
-                title: "ITR Filing",
-                description:
-                  "Professional tax return filing and planning services",
-              },
-              {
-                icon: Shield,
-                title: "Trademark & IP",
-                description:
-                  "Protect your brand with trademark and intellectual property services",
-              },
-              {
-                icon: Users,
-                title: "Payroll Services",
-                description:
-                  "Streamline your payroll process with our expert solutions",
-              },
-              {
-                icon: Clock,
-                title: "Compliance",
-                description: "Stay compliant with all regulatory requirements",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
-              >
-                <service.icon className="w-12 h-12 text-blue-900 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <Button
+                  href="/contact"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                >
+                  Get Consultation
+                </Button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
