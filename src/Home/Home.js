@@ -129,7 +129,7 @@ const HomePage = () => {
 
                 <Button
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                  className="border-2 border-white text-blue-900 bg-white hover:text-white  hover:bg-blue-800 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
                 >
                   Get Consultation
                 </Button>
@@ -142,8 +142,7 @@ const HomePage = () => {
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <WhyWeAreBest />
-          </div>
-
+        </div>
       </section>
 
       {/* Payroll Services Section */}
@@ -180,7 +179,7 @@ const HomePage = () => {
                 </p>
                 <Button
                   href="/services/payroll"
-                  className="inline-flex items-center text-blue-900 hover:text-blue-900 font-semibold text-lg transition-colors duration-300"
+                  className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600  text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -205,7 +204,7 @@ const HomePage = () => {
                 </p>
                 <Button
                   href="/services/payroll"
-                  className="inline-flex items-center text-blue-900 hover:text-blue-900 font-semibold text-lg transition-colors duration-300"
+                  className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600  text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
                 >
                   Payroll Services
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -236,16 +235,21 @@ const HomePage = () => {
       <section className="py-10 ">
         <TestimonialsSection />
       </section>
-        <QuickLinks />
 
-     
+      <section className="py-10 ">
+        <QuickLinks />
+      </section>
 
       {/* Blog Section */}
-      <BlogSlider />
+      <section className="py-10 ">
+        <BlogSlider />
+      </section>
 
-      <QuoteForm />
+      <section className="py-10 ">
+        <QuoteForm />
+      </section>
 
-       {/* Call to Action Section */}
+      {/* Call to Action Section */}
       <section className="bg-gradient-to-r from-gray-300 to-gray-400 text-white py-10 mb-5 mt-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -272,8 +276,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };
