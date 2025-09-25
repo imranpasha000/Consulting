@@ -3,6 +3,7 @@ import { FaUserTie, FaHandsHelping, FaMapMarkedAlt } from "react-icons/fa";
 
 export default function WhyWeAreBest() {
   return (
+    <>
     <section className="bg-gray-100 rounded-lg text-gray-900 py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
@@ -78,5 +79,26 @@ export default function WhyWeAreBest() {
         </div>
       </div>
     </section>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "1000+", label: "Companies Registered" },
+              { number: "500+", label: "Happy Clients" },
+              { number: "50+", label: "Expert Team" },
+              { number: "24/7", label: "Support Available" },
+            ].map((stat, index) => (
+              <div key={index}>
+                <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </>
   );
 }

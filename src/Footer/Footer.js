@@ -49,10 +49,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-900 flex-shrink-0" />
                   <Link
-                    href="tel:+919266685656"
+                    href="tel:+919650393998"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    +91-9266685656
+                    +91-9650393998
                   </Link>
                 </div>
 
@@ -179,7 +179,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              ©Copyright 2025 Chartered Help Private Limited | All Rights Reserved.
+              ©Copyright 2025 HindFilings Private Limited | All Rights Reserved.
             </div>
 
             {/* Social Media Icons */}
@@ -238,7 +238,7 @@ const Footer = () => {
 
       {/* WhatsApp floating button (optional) */}
       <Link
-        href="https://wa.me/919266685656"
+        href="https://wa.me/919650393998"
         className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-50"
         aria-label="WhatsApp Chat"
       >

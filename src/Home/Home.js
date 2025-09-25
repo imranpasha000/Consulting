@@ -14,6 +14,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSlider from "@/components/BlogSlider";
 import AboutSection from "@/components/AboutSection";
 import WhyWeAreBest from "@/components/WhyWeAreBest";
+import QuickLinks from "@/components/QuickLinks";
+import QuoteForm from "@/components/QuoteForm";
 
 const services = [
   {
@@ -58,12 +60,12 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Featured Carousel */}
-      <section className="py-4 bg-white">
+      <section className="py-4">
         <CarouselBanner />
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-12">
@@ -137,7 +139,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <WhyWeAreBest />
           </div>
@@ -145,7 +147,7 @@ const HomePage = () => {
       </section>
 
       {/* Payroll Services Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* First Payroll Card */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12">
@@ -231,12 +233,20 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-10 ">
         <TestimonialsSection />
       </section>
+        <QuickLinks />
 
-      {/* Call to Action Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
+     
+
+      {/* Blog Section */}
+      <BlogSlider />
+
+      <QuoteForm />
+
+       {/* Call to Action Section */}
+      <section className="bg-gradient-to-r from-gray-300 to-gray-400 text-white py-10 mb-5 mt-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
@@ -263,29 +273,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <BlogSlider />
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "1000+", label: "Companies Registered" },
-              { number: "500+", label: "Happy Clients" },
-              { number: "50+", label: "Expert Team" },
-              { number: "24/7", label: "Support Available" },
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
