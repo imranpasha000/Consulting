@@ -4,39 +4,42 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
-import { Search } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import React, { useRef, useState } from "react";
-import { menuConfig } from "./menuConfig";
+import { Search, Building2, FileText, Calculator, Briefcase, Shield, Users, Award } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useRef, useState } from 'react';
+
 
 const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [activeMobileSection, setActiveMobileSection] = useState(null);
-
-  // Toggle for mobile menu accordion
-  const toggleMobileSection = (label) => {
-    setActiveMobileSection(activeMobileSection === label ? null : label);
-  };
-
-  // Search
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeMobileSection, setActiveMobileSection] = useState(null);
+  const toggleMobileSection = (sectionKey) => {
+    setActiveMobileSection((prev) => (prev === sectionKey ? null : sectionKey));
+
+
+  };
   const [isSearchHover, setIsSearchHover] = useState(false);
   const searchInputRef = useRef(null);
   const openSearch = () => {
     setIsSearchOpen(true);
     setIsSearchHover(false);
-    setTimeout(() => searchInputRef.current?.focus(), 0);
+    setTimeout(() => {
+      if (searchInputRef.current) {
+        searchInputRef.current.focus();
+      }
+    }, 0);
   };
   const closeSearch = () => setIsSearchOpen(false);
   const showSearch = isSearchOpen || isSearchHover;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -54,70 +57,580 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {menuConfig.map((menu, i) =>
-                  menu.columns ? (
-                    <NavigationMenuItem key={i}>
-                      <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
-                        {menu.label}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="w-[700px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
-                          <div
-                            className={`grid gap-6 grid-cols-${menu.columns.length}`}
-                          >
-                            {menu.columns.map((col, j) => (
-                              <div key={j} className="space-y-4">
-                                <h3 className="font-bold text-gray-900 text-base">
-                                  {col.title}
-                                </h3>
-                                <div className="space-y-2">
-                                  {col.links.map((link, k) => (
-                                    <Link
-                                      key={k}
-                                      href={link.href}
-                                      className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors"
-                                    >
-                                      {link.name}
-                                    </Link>
-                                  ))}
-                                </div>
+          {/* Navigation Menu */}
+          <NavigationMenu className="hidden lg:flex" viewport={false}>
+            <NavigationMenuList className="flex space-x-1">
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
+                    Home
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
+                  Company Registration
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[700px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
+                    <div className="grid grid-cols-3 gap-6">
+
+                      {/* Incorporation Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Building2 className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Incorporation</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/company-registration/private-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Private Limited Company
+                          </Link>
+                          <Link href="/company-registration/one-person" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            One Person Company
+                          </Link>
+                          <Link href="/company-registration/public-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Public Limited Company
+                          </Link>
+                          <Link href="/company-registration/section-8" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Section-8 Company
+                          </Link>
+                          <Link href="/company-registration/llp" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Limited Liability Partnership
+                          </Link>
+                          <Link href="/company-registration/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Increase in Authorized Capital
+                          </Link>
+                          <Link href="/company-registration/tds-registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Increase in Paid -Up-Capital
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Compliance Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Shield className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Compliances</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/compliance/annual-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Annual Return
+                          </Link>
+                          <Link href="/compliance/din-kyc" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Director DIN-KYC
+                          </Link>
+                          <Link href="/compliance/appoint-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Director Appointment
+                          </Link>
+                          <Link href="/compliance/remove-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Director Removal
+                          </Link>
+                          <Link href="/compliance/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Wind-up LLP
+                          </Link>
+                          <Link href="/compliance/change-office" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Registered Office Change
+                          </Link>
+                          <Link href="/compliance/name-change" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Name Change
+                          </Link>
+                          <Link href="/compliance/director-changes" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Appointment & Resignation of Director
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Conversion Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Users className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Conversion</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/conversion/opc-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            OPC to Private Limited
+                          </Link>
+                          <Link href="/conversion/pvt-to-public" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Private Limited to Public Limited
+                          </Link>
+                          <Link href="/conversion/llp-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            LLP to Private Limited
+                          </Link>
+                          <Link href="/conversion/windup-company" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Wind-up Company
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Visual Element */}
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-2 right-4 w-16 h-16 bg-white rounded-full"></div>
+                          <div className="absolute bottom-2 left-4 w-12 h-12 bg-white rounded-full"></div>
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full"></div>
+                        </div>
+                        <div className="relative z-10 flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                              <Building2 className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-base">Complete Business Solutions</h4>
+                              <p className="text-xs opacity-90">From registration to compliance - we&apos;ve got you covered!</p>
+                            </div>
+                          </div>
+                          <div className="hidden lg:block">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                              <div className="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
+                                <Building2 className="w-6 h-6 text-white" />
                               </div>
-                            ))}
+                            </div>
                           </div>
                         </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  ) : (
-                    <NavigationMenuItem key={i}>
-                      <Link
-                        href={menu.href}
-                        className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors"
-                      >
-                        {menu.label}
-                      </Link>
-                    </NavigationMenuItem>
-                  )
-                )}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
+                  GST Registration
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className=" p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
+                    {/* GST Column */}
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                          <Calculator className="w-4 h-4 text-white" />
+                        </div>
+                        <h3 className="font-bold text-gray-900 text-base">GST</h3>
+                      </div>
+                      <div className="space-y-2">
+                        <Link href="/gst/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST Registration
+                        </Link>
+                        <Link href="/gst/return-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST Return Filing
+                        </Link>
+                        <Link href="/gst/nil-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST Nil Return Filing
+                        </Link>
+                        <Link href="/gst/modification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST Modification
+                        </Link>
+                        <Link href="/gst/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GSTR-9 Annual Filing
+                        </Link>
+                        <Link href="/gst/lut-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST LUT Filing
+                        </Link>
+                        <Link href="/gst/eway-bill" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                          GST E-Way Bill
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Annual Compliances Column */}
+                    {/* <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <FileText className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Annual Compliances & Others</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/compliance/annual-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Annual Compliance & Filing
+                          </Link>
+                          <Link href="/compliance/bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Annual Compliance & Bookkeeping
+                          </Link>
+                          <Link href="/tax/tax-planning" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Tax Planning & Consultancy
+                          </Link>
+                          <Link href="/services/online-bookkeeping" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Online Bookkeeping
+                          </Link>
+                          <Link href="/ngo/12a-80g" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            12A-80G-CSR
+                          </Link>
+                          <Link href="/services/project-report" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Project Report
+                          </Link>
+                          <Link href="/compliance/dpt-3" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            DPT-3 Filing
+                          </Link>
+                          <Link href="/ngo/darpan" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            NGO DARPAN Registration
+                          </Link>
+                        </div>
+                      </div> */}
+
+                    {/* Payroll Compliance Column */}
+                    {/* <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Users className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Payroll Compliance</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/payroll/pf-esic-registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            PF-ESIC Registration
+                          </Link>
+                          <Link href="/payroll/pf-esic-filing" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            PF-ESIC Return Filing
+                          </Link>
+                        </div>
+                      </div> */}
+
+                    {/* Visual Element */}
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-3 right-6 w-12 h-12 bg-white rounded-full"></div>
+                          <div className="absolute bottom-3 left-6 w-16 h-16 bg-white rounded-full"></div>
+                          <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-white rounded-full"></div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="relative z-10 flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                              <Calculator className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-lg">Complete Tax Solutions</h4>
+                              <p className="text-sm opacity-90">GST, Compliance & More - Expert tax services!</p>
+                            </div>
+                          </div>
+
+                          {/* Illustration */}
+                          <div className="hidden lg:block">
+                            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
+                              <div className="w-16 h-16 bg-white/30 rounded-lg flex items-center justify-center">
+                                <div className="flex flex-col items-center space-y-1">
+                                  <div className="w-6 h-6 bg-white rounded-sm"></div>
+                                  <div className="w-4 h-4 bg-white rounded-sm"></div>
+                                  <div className="w-5 h-5 bg-white rounded-sm"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
+                  ITR Filing
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[400px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* Individual Tax Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <FileText className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Individual Tax</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/itr/salaried" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Salaried ITR Filing
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Business Tax Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Briefcase className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Business Tax</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/itr/business" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Business ITR Filing
+                          </Link>
+                          <Link href="/itr/tds-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            TDS Return Filing
+                          </Link>
+                          <Link href="/itr/audit" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Tax Audit
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Visual Element */}
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-4 right-8 w-14 h-14 bg-white rounded-full"></div>
+                          <div className="absolute bottom-4 left-8 w-10 h-10 bg-white rounded-full"></div>
+                          <div className="absolute top-1/2 left-1/4 w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="relative z-10 flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                              <FileText className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-lg">Complete Tax Filing</h4>
+                              <p className="text-sm opacity-90">Individual & Business Solutions - Expert ITR services!</p>
+                            </div>
+                          </div>
+
+                          {/* Illustration */}
+                          <div className="hidden lg:block">
+                            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
+                              <div className="w-16 h-16 bg-white/30 rounded-lg flex items-center justify-center">
+                                <div className="flex flex-col items-center space-y-1">
+                                  <div className="w-8 h-2 bg-white rounded"></div>
+                                  <div className="w-6 h-2 bg-white rounded"></div>
+                                  <div className="w-7 h-2 bg-white rounded"></div>
+                                  <div className="w-5 h-2 bg-white rounded"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
+                  Other Registration
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[500px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* Trademark Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Award className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Trademark</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/trademark/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Trademark Registration
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Copyright Column */}
+                      {/* <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <FileText className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Copyright</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/copyright/registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Copyright Registration
+                          </Link>
+                        </div>
+                      </div> */}
+
+                      {/* Licenses Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Shield className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Licenses</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/licenses/import-export" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Import Export Registration
+                          </Link>
+                          <Link href="/licenses/fssai" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            FSSAI Registration
+                          </Link>
+                          <Link href="/licenses/fssai-annual" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            PF Registration
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            ESI Registration
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Shop Establishment
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Trust Registration
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            NGO Registration
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            MSME Registration
+                          </Link>
+                          <Link href="/licenses/bis-certificate" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Factory Pollution Registration
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Visual Element */}
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-2 right-4 w-18 h-18 bg-white rounded-full"></div>
+                          <div className="absolute bottom-2 left-4 w-14 h-14 bg-white rounded-full"></div>
+                          <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-white rounded-full"></div>
+                          <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="relative z-10 flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                              <Award className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-lg">Complete Registration Solutions</h4>
+                              <p className="text-sm opacity-90">Trademark, Copyright & Licenses - Professional registration!</p>
+                            </div>
+                          </div>
+
+                          {/* Illustration */}
+                          <div className="hidden lg:block">
+                            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
+                              <div className="w-16 h-16 bg-white/30 rounded-lg flex items-center justify-center">
+                                <div className="flex items-center space-x-1">
+                                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                                  <div className="w-4 h-4 bg-white rounded-full"></div>
+                                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">
+                  Other Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[400px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
+                    <div className="grid  gap-6">
+                      {/* Professional Services Column */}
+                      <div className="space-y-4">
+                        <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                            <Briefcase className="w-4 h-4 text-white" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 text-base">Professional Services</h3>
+                        </div>
+                        <div className="space-y-2">
+                          <Link href="/services/accounting" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Accounting Services
+                          </Link>
+                          <Link href="/services/iso-certification" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            ISO Certification
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Visual Element */}
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-3 right-6 w-16 h-16 bg-white rounded-full"></div>
+                          <div className="absolute bottom-3 left-6 w-12 h-12 bg-white rounded-full"></div>
+                          <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-white rounded-full"></div>
+                          <div className="absolute bottom-1/4 left-1/4 w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="relative z-10 flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                              <Briefcase className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-lg">Complete Business Solutions</h4>
+                              <p className="text-sm opacity-90">Professional & Specialized Services - Your success is our priority!</p>
+                            </div>
+                          </div>
+
+                          {/* Illustration */}
+                          <div className="hidden lg:block">
+                            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
+                              <div className="w-16 h-16 bg-white/30 rounded-lg flex items-center justify-center">
+                                <div className="flex flex-col items-center space-y-1">
+                                  <div className="w-8 h-3 bg-white rounded"></div>
+                                  <div className="w-6 h-3 bg-white rounded"></div>
+                                  <div className="w-7 h-3 bg-white rounded"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
+                    Blog
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/contact" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors">
+                    Contact
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Search Icon */}
-          <div
-            className="flex items-center"
-            onMouseEnter={() => setIsSearchHover(true)}
-            onMouseLeave={() => setIsSearchHover(false)}
-          >
-            <button
-              className="p-2 text-gray-500 hover:text-blue-900 transition-colors"
-              onClick={openSearch}
-              aria-expanded={showSearch}
-              aria-controls="header-search-input"
-            >
+          <div className="flex items-center" onMouseEnter={() => setIsSearchHover(true)} onMouseLeave={() => setIsSearchHover(false)}>
+            <button className="p-2 text-gray-500 hover:text-blue-900 transition-colors" onClick={openSearch} aria-expanded={showSearch} aria-controls="header-search-input">
               <Search className="w-5 h-5" />
               <span className="sr-only">Search</span>
             </button>
@@ -125,94 +638,178 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button
-              className="p-2 text-gray-500 hover:text-blue-900"
-              onClick={() => setIsMobileOpen((v) => !v)}
-              aria-expanded={isMobileOpen}
-              aria-controls="mobile-menu"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+            <button className="p-2 text-gray-500 hover:text-blue-900" onClick={() => setIsMobileOpen((v) => !v)} aria-expanded={isMobileOpen} aria-controls="mobile-menu">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
         </div>
+        {/* Mobile dropdown menu */}
 
-        {/* Mobile Menu */}
         {isMobileOpen && (
           <div id="mobile-menu" className="lg:hidden border-t">
             <nav className="p-4 space-y-2">
-              {menuConfig.map((menu, i) =>
-                menu.columns ? (
-                  <div key={i}>
-                    <button
-                      type="button"
-                      onClick={() => toggleMobileSection(menu.label)}
-                      className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
-                    >
-                      {menu.label}
-                    </button>
-                    {activeMobileSection === menu.label && (
+              <Link href="/" className="block py-2 text-sm font-medium text-gray-700">Home</Link>
+
+              {/* Company Registration */}
+              <button
+                type="button"
+                onClick={() => toggleMobileSection("company-registration")}
+                className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
+              >
+                Company Registration
+              </button>
+
+              {activeMobileSection === "company-registration" && (
                       <div className="pl-4 space-y-1 mt-1">
-                        {menu.columns.flatMap((col) =>
-                          col.links.map((link, k) => (
-                            <Link
-                              key={k}
-                              href={link.href}
-                              className="block text-sm text-gray-700"
-                            >
-                              {link.name}
-                            </Link>
-                          ))
-                        )}
+                        <Link href="/company-registration/private-limited" className="block text-sm text-gray-700">Private Limited Company</Link>
+                        <Link href="/company-registration/one-person" className="block text-sm text-gray-700">One Person Company</Link>
+                        <Link href="/company-registration/public-limited" className="block text-sm text-gray-700">Public Limited Company</Link>
+                        <Link href="/company-registration/section-8" className="block text-sm text-gray-700">Section-8 Company</Link>
+                        <Link href="/company-registration/llp" className="block text-sm text-gray-700">Limited Liability Partnership</Link>
+                        <Link href="/company-registration/increase-capital" className="block text-sm text-gray-700">Increase in Authorized Capital</Link>
+                        <Link href="/company-registration/increase-paidup" className="block text-sm text-gray-700">Increase in Paid-Up-Capital</Link>
+                           <Link href="/conversion/opc-to-pvt" className="block text-sm text-gray-700">OPC to Private Limited</Link>
+                        <Link href="/conversion/pvt-to-public" className="block text-sm text-gray-700">Private Limited to Public Limited</Link>
+                        <Link href="/conversion/llp-to-pvt" className="block text-sm text-gray-700">LLP to Private Limited</Link>
+                        <Link href="/conversion/windup-company" className="block text-sm text-gray-700">Wind-up Company</Link>
+                        <Link href="/compliance/annual-return" className="block text-sm text-gray-700">Annual Return</Link>
+                        <Link href="/compliance/din-kyc" className="block text-sm text-gray-700">Director DIN-KYC</Link>
+                        <Link href="/compliance/appoint-director" className="block text-sm text-gray-700">Director Appointment</Link>
+                        <Link href="/compliance/remove-director" className="block text-sm text-gray-700">Director Removal</Link>
+                        <Link href="/compliance/windup-llp" className="block text-sm text-gray-700">Wind-up LLP</Link>
+                        <Link href="/compliance/change-office" className="block text-sm text-gray-700">Registered Office Change</Link>
+                        <Link href="/compliance/name-change" className="block text-sm text-gray-700">Name Change</Link>
+                        <Link href="/compliance/appoint-resign" className="block text-sm text-gray-700">Appointment & Resignation of Director</Link>
                       </div>
                     )}
-                  </div>
-                ) : (
-                  <Link
-                    key={i}
-                    href={menu.href}
-                    className="block py-2 text-sm font-medium text-gray-700"
-                  >
-                    {menu.label}
-                  </Link>
-                )
+
+
+              {/* GST Registration */}
+              <button
+                type="button"
+                className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
+                aria-expanded={activeMobileSection === "gst"}
+                onClick={() => toggleMobileSection("gst")}
+              >
+                GST Registration
+              </button>
+
+              {activeMobileSection === "gst" && (
+                <div className="pl-4 space-y-1 mt-1">
+                  <Link href="/gst/registration" className="block text-sm text-gray-700">GST Registration</Link>
+                  <Link href="/gst/return-filing" className="block text-sm text-gray-700">GST Return Filing</Link>
+                  <Link href="/gst/nil-return" className="block text-sm text-gray-700">GST Nil Return Filing</Link>
+                  <Link href="/gst/modification" className="block text-sm text-gray-700">GST Modification</Link>
+                  <Link href="/gst/gstr9-annual" className="block text-sm text-gray-700">GSTR-9 Annual Filing</Link>
+                  <Link href="/gst/lut-filing" className="block text-sm text-gray-700">GST LUT Filing</Link>
+                  <Link href="/gst/e-way-bill" className="block text-sm text-gray-700">GST E-Way Bill</Link>
+                </div>
               )}
+
+
+              {/* ITR Filing */}
+              <button
+                type="button"
+                className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
+                aria-expanded={activeMobileSection === "itr"}
+                onClick={() => toggleMobileSection("itr")}
+              >
+                ITR Filing
+              </button>
+
+              {activeMobileSection === "itr" && (
+                <div className="pl-4 space-y-1 mt-1">
+                  {/* Individual Tax */}
+                  <p className="text-xs font-semibold text-gray-500 mt-2">Individual Tax</p>
+                  <Link href="/itr/salaried" className="block text-sm text-gray-700">Salaried ITR Filing</Link>
+
+                  {/* Business Tax */}
+                  <p className="text-xs font-semibold text-gray-500 mt-3">Business Tax</p>
+                  <Link href="/itr/business" className="block text-sm text-gray-700">Business ITR Filing</Link>
+                  <Link href="/itr/tds-return" className="block text-sm text-gray-700">TDS Return Filing</Link>
+                  <Link href="/itr/tax-audit" className="block text-sm text-gray-700">Tax Audit</Link>
+                </div>
+              )}
+
+
+              {/* Other Registration */}
+              <button
+                type="button"
+                className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
+                aria-expanded={activeMobileSection === "otherReg"}
+                onClick={() => toggleMobileSection("otherReg")}
+              >
+                Other Registration
+              </button>
+
+              {activeMobileSection === "otherReg" && (
+                <div className="pl-4 space-y-1 mt-1">
+                  {/* Trademark */}
+                  <p className="text-xs font-semibold text-gray-500 mt-2">Trademark</p>
+                  <Link href="/other/trademark" className="block text-sm text-gray-700">Trademark Registration</Link>
+
+                  {/* Licenses */}
+                  <p className="text-xs font-semibold text-gray-500 mt-3">Licenses</p>
+                  <Link href="/other/import-export" className="block text-sm text-gray-700">Import Export Registration</Link>
+                  <Link href="/other/fssai" className="block text-sm text-gray-700">FSSAI Registration</Link>
+                  <Link href="/other/pf" className="block text-sm text-gray-700">PF Registration</Link>
+                  <Link href="/other/esi" className="block text-sm text-gray-700">ESI Registration</Link>
+                  <Link href="/other/shop-establishment" className="block text-sm text-gray-700">Shop Establishment</Link>
+                  <Link href="/other/factory-pollution" className="block text-sm text-gray-700">Factory Pollution Registration</Link>
+
+                  {/* Organizations */}
+                  <p className="text-xs font-semibold text-gray-500 mt-3">Organizations</p>
+                  <Link href="/other/trust" className="block text-sm text-gray-700">Trust Registration</Link>
+                  <Link href="/other/ngo" className="block text-sm text-gray-700">NGO Registration</Link>
+                  <Link href="/other/msme" className="block text-sm text-gray-700">MSME Registration</Link>
+                </div>
+              )}
+
+              {/* Professional Services Section */}
+              <button
+                type="button"
+                className="w-full text-left cursor-pointer py-2 text-sm font-medium text-gray-700"
+                aria-expanded={activeMobileSection === 'professional'}
+                onClick={() => toggleMobileSection('professional')}
+              >
+                Professional Services
+              </button>
+              {activeMobileSection === 'professional' && (
+                <div className="pl-4 space-y-1 mt-1">
+                  <Link href="/services/accounting" className="block text-sm text-gray-700">
+                    Accounting Services
+                  </Link>
+                  <Link href="/services/iso-certification" className="block text-sm text-gray-700">
+                    ISO Certification
+                  </Link>
+                </div>
+              )}
+
+
+              <Link href="/blog" className="block py-2 text-sm font-medium text-gray-700">Blog</Link>
+              <Link href="/contact" className="block py-2 text-sm font-medium text-gray-700">Contact</Link>
             </nav>
           </div>
         )}
-
-        {/* Search Popup */}
-        {isSearchOpen && (
-          <div className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6">
-            <div
-              className="absolute inset-0 bg-black/40"
-              onClick={closeSearch}
-            />
-            <div className="relative z-10 w-full max-w-lg rounded-lg bg-white shadow-lg border p-4">
-              <div className="flex items-center gap-2">
-                <input
-                  ref={searchInputRef}
-                  id="header-search-input"
-                  type="text"
-                  placeholder="Search..."
-                  className="flex-1 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
-                />
-              </div>
+      </div>
+      {isSearchOpen && (
+        <div className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6">
+          <div className="absolute inset-0 bg-black/40" onClick={closeSearch} />
+          <div className="relative z-10 w-full max-w-lg rounded-lg bg-white shadow-lg border p-4">
+            <div className="flex items-center gap-2">
+              <input
+                ref={searchInputRef}
+                id="header-search-input"
+                type="text"
+                placeholder="Search..."
+                className="flex-1 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
+              />
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
