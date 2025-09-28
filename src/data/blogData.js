@@ -186,7 +186,7 @@ export const blogPosts = [
     author: "Hind Filings Team",
     date: "2025-01-10",
     category: "Income Tax",
-    image: "https://images.unsplash.com/photo-1554224154-26032fce75d7?auto=format&fit=crop&q=80&w=800&h=400",
+    image: "https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     readTime: "7 min read",
     tags: ["ITR", "Income Tax", "Tax Filing"]
   },

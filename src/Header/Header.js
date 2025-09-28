@@ -71,6 +71,7 @@ const Header = () => {
                 <NavigationMenuContent>
                   <div className="w-[700px] p-4 bg-white shadow-xl border border-gray-100 rounded-lg">
                     <div className="grid grid-cols-3 gap-6">
+
                       {/* Incorporation Column */}
                       <div className="space-y-4">
                         <div className="flex items-center space-x-2 mb-3 pb-2 border-b border-gray-100">
@@ -83,9 +84,6 @@ const Header = () => {
                           <Link href="/company-registration/private-limited" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Private Limited Company
                           </Link>
-                          <Link href="/company-registration/llp" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            LLP Registration
-                          </Link>
                           <Link href="/company-registration/one-person" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             One Person Company
                           </Link>
@@ -93,10 +91,16 @@ const Header = () => {
                             Public Limited Company
                           </Link>
                           <Link href="/company-registration/section-8" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Section 8 Company
+                            Section-8 Company
                           </Link>
-                          <Link href="/company-registration/business-license" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Business Registration License
+                          <Link href="/company-registration/llp" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Limited Liability Partnership
+                          </Link>
+                          <Link href="/company-registration/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Increase in Authorized Capital
+                          </Link>
+                          <Link href="/company-registration/tds-registration" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Increase in Paid -Up-Capital
                           </Link>
                         </div>
                       </div>
@@ -107,26 +111,38 @@ const Header = () => {
                           <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-md">
                             <Shield className="w-4 h-4 text-white" />
                           </div>
-                          <h3 className="font-bold text-gray-900 text-base">Compliance</h3>
+                          <h3 className="font-bold text-gray-900 text-base">Compliances</h3>
                         </div>
                         <div className="space-y-2">
+                          <Link href="/compliance/annual-return" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Annual Return
+                          </Link>
                           <Link href="/compliance/din-kyc" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Director DIN e KYC Update
+                            Director DIN-KYC
                           </Link>
                           <Link href="/compliance/appoint-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Appointment of Director
+                            Director Appointment
                           </Link>
                           <Link href="/compliance/remove-director" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Removal of Director
-                          </Link>
-                          <Link href="/compliance/winding-up" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Pvt. Ltd. Winding up
+                            Director Removal
                           </Link>
                           <Link href="/compliance/increase-capital" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Increase Authorized Capital
+                            Wind-up LLP
                           </Link>
                           <Link href="/compliance/change-office" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
                             Registered Office Change
+                          </Link>
+                          <Link href="/compliance/name-change" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Name Change
+                          </Link>
+                          <Link href="/compliance/director-changes" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Appointment & Resignation of Director
+                          </Link>
+                          <Link href="/compliance/share-transfer" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Share Transfer
+                          </Link>
+                          <Link href="/compliance/moa-amendment" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            MOA Amendment
                           </Link>
                         </div>
                       </div>
@@ -141,19 +157,16 @@ const Header = () => {
                         </div>
                         <div className="space-y-2">
                           <Link href="/conversion/opc-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            OPC to PVT. Conversion
+                            OPC to Private Limited
                           </Link>
                           <Link href="/conversion/pvt-to-public" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            PVT. to Public Ltd Conversion
+                            Private Limited to Public Limited
                           </Link>
                           <Link href="/conversion/llp-to-pvt" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            LLP to PVT Conversion
+                            LLP to Private Limited
                           </Link>
-                          <Link href="/conversion/section-8-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Sec-8 Winding Up
-                          </Link>
-                          <Link href="/conversion/nidhi-winding" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
-                            Nidhi Winding Up
+                          <Link href="/conversion/windup-company" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md transition-colors">
+                            Wind-up Company
                           </Link>
                         </div>
                       </div>
@@ -162,14 +175,11 @@ const Header = () => {
                     {/* Visual Element */}
                     <div className="mt-4 pt-3 border-t border-gray-200">
                       <div className="relative bg-gradient-to-r from-blue-900 via-blue-900 to-red-500 rounded-lg p-4 text-white overflow-hidden">
-                        {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-10">
                           <div className="absolute top-2 right-4 w-16 h-16 bg-white rounded-full"></div>
                           <div className="absolute bottom-2 left-4 w-12 h-12 bg-white rounded-full"></div>
                           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full"></div>
                         </div>
-
-                        {/* Main Content */}
                         <div className="relative z-10 flex items-center justify-between">
                           <div className="flex items-center space-x-3">
                             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -180,8 +190,6 @@ const Header = () => {
                               <p className="text-xs opacity-90">From registration to compliance - we&apos;ve got you covered!</p>
                             </div>
                           </div>
-
-                          {/* Illustration */}
                           <div className="hidden lg:block">
                             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                               <div className="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
@@ -195,6 +203,7 @@ const Header = () => {
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-900">

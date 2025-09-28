@@ -6,7 +6,7 @@ import GoogleMap from '@/components/GoogleMap';
 
 const Footer = () => {
   return (
-  <footer className="relative bg-blue-900 text-white">
+  <footer className="relative bg-blue-900 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   {/* Dark overlay for contrast */}
   <div className="absolute inset-0 bg-black/40 z-0"></div>
 
