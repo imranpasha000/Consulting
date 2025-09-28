@@ -84,12 +84,12 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Featured Carousel */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 mt-5">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-5">
         <CarouselBanner />
       </section>
 
       {/* Services Overview */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -100,7 +100,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <section>
+        <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
           <AboutSection
             title="About HindFilings"
             subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
@@ -129,12 +129,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Hero Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 bg-blue-900 text-white py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-10 mb-5 mt-5">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Your Business Growth Partner
-          </h1>
+          </h2>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
             HindFilings provides comprehensive business solutions from company
             registration to ongoing compliance
@@ -159,12 +158,12 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
         <WhyWeAreBest />
       </section>
 
       {/* Payroll Services Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
         {/* First Payroll Card */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -248,7 +247,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
         <TestimonialsSection />
       </section>
 
@@ -257,35 +256,35 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
         <BlogSlider />
       </section>
 
-      <section className="w-full py-10 bg-gray-50 px-2 sm:px-4 lg:px-8">
+      <section className="max-w-screen-2xl mx-auto w-full py-10 bg-gray-50 px-2 sm:px-4 lg:px-8">
         <QuoteForm />
       </section>
 
       {/* Call to Action Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-300 to-gray-400 text-white py-10 mb-5 mt-5">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-10 mb-5 mt-5">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
           </h2>
-          <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get expert guidance and comprehensive solutions for all your
             business needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href="/contact"
-              className="bg-blue-900 text-white hover:bg-white border-2 hover:text-gray-900 border-blue-900 hover:border-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="bg-green-600 text-white hover:bg-white border-2 hover:text-blue-900 border-green-600 hover:border-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               Get Free Consultation
             </Button>
 
             <Button
               href="/services"
-              className="border-2 border-white text-gray-900 bg-white hover:bg-gray-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="border-2 border-white text-blue-900 bg-white hover:bg-blue-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               View All Services
             </Button>
@@ -293,7 +292,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
         <FaqAccordion title="Frequently Asked Questions" faqs={faqData} />
       </section>
     </div>

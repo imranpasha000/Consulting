@@ -12,7 +12,7 @@ const BlogPage = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Our Blog
           </h1>
@@ -24,7 +24,7 @@ const BlogPage = () => {
 
       {/* Blog Posts Grid */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter and Search */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">

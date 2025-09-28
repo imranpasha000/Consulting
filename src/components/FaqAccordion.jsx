@@ -9,7 +9,7 @@ export default function FaqAccordion({ title, faqs }) {
   };
 
   return (
-    <div className="max-w-3xl mx-auto my-8">
+    <div className="max-w-8xl mx-auto my-8">
       {title && (
         <h2 className="text-2xl font-bold text-center text-blue-900 mb-6">
           {title}

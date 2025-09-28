@@ -5,7 +5,7 @@ export default function WhyWeAreBest() {
   return (
     <>
     <section className="bg-gray-100 rounded-lg text-gray-900 py-16 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
           <p className="text-green-500 font-semibold uppercase tracking-wide">
@@ -81,7 +81,7 @@ export default function WhyWeAreBest() {
     </section>
       {/* Stats Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { number: "1000+", label: "Companies Registered" },
