@@ -129,31 +129,28 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-10 mb-5 mt-5">
+      <section className="w-full max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-8 sm:py-10 mb-5 mt-5 overflow-hidden">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Your Business Growth Partner
           </h2>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            HindFilings provides comprehensive business solutions from company
-            registration to ongoing compliance
+          <p className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 text-blue-100 max-w-3xl mx-auto px-2">
+            HindFilings provides comprehensive business solutions from company registration to ongoing compliance
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="flex gap-4 mt-6">
-              <Button
-                href="/company-registration"
-                className="bg-green-600 border-2 border-white text-white hover:bg-blue-800 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Start Your Business
-              </Button>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
+            <Button
+              href="/company-registration"
+              className="w-full sm:w-auto bg-green-600 border-2 border-white text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+            >
+              Start Your Business
+            </Button>
 
-              <Button
-                href="/contact"
-                className="border-2 border-white text-blue-900 bg-white hover:text-white  hover:bg-blue-800 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Get Consultation
-              </Button>
-            </div>
+            <Button
+              href="/contact"
+              className="w-full sm:w-auto border-2 border-white text-blue-900 bg-white hover:text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+            >
+              Get Consultation
+            </Button>
           </div>
         </div>
       </section>

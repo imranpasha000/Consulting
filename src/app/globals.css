@@ -112,11 +112,25 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+/* Tailwind base styles for full responsiveness and no horizontal overflow */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Use Tailwind utility classes in all components for layout: w-full, max-w-screen-2xl, px-2/4/8, mx-auto, etc. */
