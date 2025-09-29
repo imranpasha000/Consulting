@@ -19,19 +19,19 @@ const bannerSlides = [
   {
     title: "ITR Filing Simplified",
     description: "File your income tax returns quickly and accurately with our experts.",
-    image: "/banner/3.png",
+    image: "/banner/4.png",
     cta: { label: "File ITR", href: "/itr" }
   },
   {
     title: "Trademark & IP Protection",
     description: "Safeguard your brand with our trademark and copyright services.",
-    image: "/banner/4.png",
+    image: "/banner/accounting.png",
     cta: { label: "Protect Your Brand", href: "/other/trademark" }
   },
   {
     title: "Business Consultation",
     description: "Get strategic advice for your business growth and compliance.",
-    image: "/banner/5.png",
+    image: "/banner/Registration.png",
     cta: { label: "Book Consultation", href: "/contact" }
   }
 ];
