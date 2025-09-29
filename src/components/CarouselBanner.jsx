@@ -11,26 +11,26 @@ const bannerSlides = [
     cta: { label: "Get Started", href: "/company-registration" }
   },
   {
-    title: "Expert GST Services",
-    description: "From registration to return filing, we handle all your GST needs.",
+    title: "",
+    description: "",
     image: "/banner/2.png",
     cta: { label: "Explore GST", href: "/gst" }
   },
   {
-    title: "ITR Filing Simplified",
-    description: "File your income tax returns quickly and accurately with our experts.",
+    title: "",
+    description: "",
     image: "/banner/4.png",
     cta: { label: "File ITR", href: "/itr" }
   },
   {
-    title: "Trademark & IP Protection",
-    description: "Safeguard your brand with our trademark and copyright services.",
+    title: "",
+    description: "",
     image: "/banner/accounting.png",
     cta: { label: "Protect Your Brand", href: "/other/trademark" }
   },
   {
-    title: "Business Consultation",
-    description: "Get strategic advice for your business growth and compliance.",
+    title: "",
+    description: "",
     image: "/banner/Registration.png",
     cta: { label: "Book Consultation", href: "/contact" }
   }
