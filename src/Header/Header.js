@@ -38,7 +38,7 @@ const Header = () => {
   const showSearch = isSearchOpen || isSearchHover;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm border-b transition-all duration-300">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -662,28 +662,28 @@ const Header = () => {
               </button>
 
               {activeMobileSection === "company-registration" && (
-                      <div className="pl-4 space-y-1 mt-1">
-                        <Link href="/company-registration/private-limited" className="block text-sm text-gray-700">Private Limited Company</Link>
-                        <Link href="/company-registration/one-person" className="block text-sm text-gray-700">One Person Company</Link>
-                        <Link href="/company-registration/public-limited" className="block text-sm text-gray-700">Public Limited Company</Link>
-                        <Link href="/company-registration/section-8" className="block text-sm text-gray-700">Section-8 Company</Link>
-                        <Link href="/company-registration/llp" className="block text-sm text-gray-700">Limited Liability Partnership</Link>
-                        <Link href="/company-registration/increase-capital" className="block text-sm text-gray-700">Increase in Authorized Capital</Link>
-                        <Link href="/company-registration/increase-paidup" className="block text-sm text-gray-700">Increase in Paid-Up-Capital</Link>
-                           <Link href="/conversion/opc-to-pvt" className="block text-sm text-gray-700">OPC to Private Limited</Link>
-                        <Link href="/conversion/pvt-to-public" className="block text-sm text-gray-700">Private Limited to Public Limited</Link>
-                        <Link href="/conversion/llp-to-pvt" className="block text-sm text-gray-700">LLP to Private Limited</Link>
-                        <Link href="/conversion/windup-company" className="block text-sm text-gray-700">Wind-up Company</Link>
-                        <Link href="/compliance/annual-return" className="block text-sm text-gray-700">Annual Return</Link>
-                        <Link href="/compliance/din-kyc" className="block text-sm text-gray-700">Director DIN-KYC</Link>
-                        <Link href="/compliance/appoint-director" className="block text-sm text-gray-700">Director Appointment</Link>
-                        <Link href="/compliance/remove-director" className="block text-sm text-gray-700">Director Removal</Link>
-                        <Link href="/compliance/windup-llp" className="block text-sm text-gray-700">Wind-up LLP</Link>
-                        <Link href="/compliance/change-office" className="block text-sm text-gray-700">Registered Office Change</Link>
-                        <Link href="/compliance/name-change" className="block text-sm text-gray-700">Name Change</Link>
-                        <Link href="/compliance/appoint-resign" className="block text-sm text-gray-700">Appointment & Resignation of Director</Link>
-                      </div>
-                    )}
+                <div className="pl-4 space-y-1 mt-1">
+                  <Link href="/company-registration/private-limited" className="block text-sm text-gray-700">Private Limited Company</Link>
+                  <Link href="/company-registration/one-person" className="block text-sm text-gray-700">One Person Company</Link>
+                  <Link href="/company-registration/public-limited" className="block text-sm text-gray-700">Public Limited Company</Link>
+                  <Link href="/company-registration/section-8" className="block text-sm text-gray-700">Section-8 Company</Link>
+                  <Link href="/company-registration/llp" className="block text-sm text-gray-700">Limited Liability Partnership</Link>
+                  <Link href="/company-registration/increase-capital" className="block text-sm text-gray-700">Increase in Authorized Capital</Link>
+                  <Link href="/company-registration/increase-paidup" className="block text-sm text-gray-700">Increase in Paid-Up-Capital</Link>
+                  <Link href="/conversion/opc-to-pvt" className="block text-sm text-gray-700">OPC to Private Limited</Link>
+                  <Link href="/conversion/pvt-to-public" className="block text-sm text-gray-700">Private Limited to Public Limited</Link>
+                  <Link href="/conversion/llp-to-pvt" className="block text-sm text-gray-700">LLP to Private Limited</Link>
+                  <Link href="/conversion/windup-company" className="block text-sm text-gray-700">Wind-up Company</Link>
+                  <Link href="/compliance/annual-return" className="block text-sm text-gray-700">Annual Return</Link>
+                  <Link href="/compliance/din-kyc" className="block text-sm text-gray-700">Director DIN-KYC</Link>
+                  <Link href="/compliance/appoint-director" className="block text-sm text-gray-700">Director Appointment</Link>
+                  <Link href="/compliance/remove-director" className="block text-sm text-gray-700">Director Removal</Link>
+                  <Link href="/compliance/windup-llp" className="block text-sm text-gray-700">Wind-up LLP</Link>
+                  <Link href="/compliance/change-office" className="block text-sm text-gray-700">Registered Office Change</Link>
+                  <Link href="/compliance/name-change" className="block text-sm text-gray-700">Name Change</Link>
+                  <Link href="/compliance/appoint-resign" className="block text-sm text-gray-700">Appointment & Resignation of Director</Link>
+                </div>
+              )}
 
 
               {/* GST Registration */}
