@@ -8,10 +8,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
-import { Search, Building2, FileText, Calculator, Briefcase, Shield, Users, Award } from 'lucide-react';
-import Link from 'next/link';
+import { Award, Briefcase, Building2, Calculator, FileText, Search, Shield, Users } from 'lucide-react';
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
 
 
 const Header = () => {
