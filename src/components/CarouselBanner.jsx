@@ -29,9 +29,9 @@ const bannerSlides = [
     cta: { label: "Protect Your Brand", href: "/other/trademark" }
   },
   {
-    title: "Business Consultation",
-    description: "Get strategic advice for your business growth and compliance.",
-    image: "/banner/5.png",
+    title: "",
+    description: "",
+    image: "/banner/Registration.png",
     cta: { label: "Book Consultation", href: "/contact" }
   }
 ];
