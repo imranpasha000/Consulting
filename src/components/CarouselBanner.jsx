@@ -1,137 +1,127 @@
 "use client";
-import * as React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Button } from "./ui/button";
+import { useEffect, useState } from "react";
 
 const bannerSlides = [
   {
-    title: "",
-    description: "",
-    image: "/banner/New1.webp",
-    cta: { label: "Get Started", href: "/company-registration" }
+    image: "/Images/banner/New1.webp",
+    title: "Company Registration Services",
+    description: "Start your business journey with our expert company registration services. We handle all the paperwork so you can focus on your business.",
+    buttonText: "Get Started",
+    buttonLink: "/company-registration"
   },
   {
+    image: "/Images/banner/New1.webp",
     title: "Expert GST Services",
-    description: "From registration to return filing, we handle all your GST needs.",
-    image: "/banner/tax-1.png",
-    cta: { label: "Explore GST", href: "/gst" }
+    description: "From registration to return filing, we handle all your GST needs with precision and expertise.",
+    buttonText: "Explore GST",
+    buttonLink: "/gst"
   },
   {
+    image: "/Images/banner/New1.webp",
     title: "ITR Filing Simplified",
-    description: "File your income tax returns quickly and accurately with our experts.",
-    image: "/banner/tax1.png",
-    cta: { label: "File ITR", href: "/itr" }
+    description: "File your income tax returns quickly and accurately with our experienced professionals.",
+    buttonText: "File ITR",
+    buttonLink: "/itr"
   },
   {
-    title: "Trademark & IP Protection",
-    description: "Safeguard your brand with our trademark and copyright services.",
-    image: "/banner/tax-2.png",
-    cta: { label: "Protect Your Brand", href: "/other/trademark" }
+    image: "/Images/banner/New1.webp",
+    title: "Tax Compliance Solutions",
+    description: "Stay compliant with all tax regulations with our comprehensive tax solutions and expert guidance.",
+    buttonText: "Learn More",
+    buttonLink: "/tax-services"
   },
   {
-    title: "",
-    description: "",
-    image: "/banner/tax.png",
-    cta: { label: "Book Consultation", href: "/contact" }
+    image: "/Images/banner/New1.webp",
+    title: "Business Growth Partner",
+    description: "Your trusted partner for all business needs. From registration to ongoing compliance, we've got you covered.",
+    buttonText: "Book Consultation",
+    buttonLink: "/contact"
+  },
+  {
+    image: "/Images/banner/New1.webp",
+    title: "Professional Tax Services",
+    description: "Comprehensive tax services tailored to your business needs with expert guidance and support.",
+    buttonText: "Get Quote",
+    buttonLink: "/quote"
+  },
+  {
+    image: "/Images/banner/New1.webp",
+    title: "Business Solutions",
+    description: "Complete business solutions under one roof. From registration to compliance, we provide end-to-end support.",
+    buttonText: "Explore Services",
+    buttonLink: "/services"
   }
 ];
 
-const CarouselBanner = () => {
-  const [emblaApi, setEmblaApi] = React.useState(null);
+export default function CarouselHero({ slides = bannerSlides, interval = 5000 }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Autoplay logic using Embla's API
-  React.useEffect(() => {
-    if (!emblaApi) return;
-    const interval = setInterval(() => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0);
-      }
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, interval);
+    return () => clearInterval(autoSlide);
+  }, [slides.length, interval]);
+
+  const goToSlide = (index) => setCurrentSlide(index);
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <Carousel 
-      className="w-full overflow-hidden" 
-      setApi={setEmblaApi}
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-    >
-      <CarouselContent className="h-screen">
-        {bannerSlides.map((slide, index) => (
-          <CarouselItem
-            key={index}
-            className="h-screen w-full relative"
-          >
-            {/* Background Image - Using img for better responsive control */}
-            <div className="absolute inset-0 w-full h-full">
-              <img
-                src={slide.image}
-                alt={slide.title || `Banner ${index + 1}`}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            {/* Gradient Overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
-            {/* Content Container - Responsive positioning */}
-            <div className="relative h-full w-full flex items-end justify-center pb-8 sm:pb-12 md:pb-16 lg:pb-20">
-              <div className="z-10 w-full max-w-4xl mx-auto text-center px-4 sm:px-6 md:px-8">
-                {/* Only show text if title or description exists */}
-                {(slide.title || slide.description) && (
-                  <>
-                    {slide.title && (
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 drop-shadow-2xl leading-tight">
-                        {slide.title}
-                      </h2>
-                    )}
-                    {slide.description && (
-                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 drop-shadow-lg max-w-3xl mx-auto leading-relaxed">
-                        {slide.description}
-                      </p>
-                    )}
-                  </>
-                )}
-                
-                {/* CTA Button - Always visible, responsive sizing */}
-                <Button
-                  asChild
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-sm sm:text-base md:text-lg"
-                >
-                  <a href={slide.cta.href}>{slide.cta.label}</a>
-                </Button>
-              </div>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-
-      {/* Navigation Buttons - Responsive positioning and sizing */}
-      <CarouselPrevious className="absolute left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 sm:w-12 sm:h-12 transition-all hover:scale-110" />
-      <CarouselNext className="absolute right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 sm:w-12 sm:h-12 transition-all hover:scale-110" />
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {bannerSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              emblaApi?.selectedScrollSnap() === index
-                ? 'bg-white w-8 sm:w-10'
-                : 'bg-white/50 hover:bg-white/75 w-2'
+    <div className="relative w-full h-[700px] overflow-hidden text-white">
+      {/* Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-3000 ${index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+        >
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="absolute w-full h-full object-contain"
           />
+          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="relative z-30 flex flex-col items-center justify-center h-full text-center px-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+              {slide.title}
+            </h1>
+            <p className="text-lg md:text-xl mb-6 drop-shadow-md">{slide.description}</p>
+            <a
+              href={slide.buttonLink}
+              className="inline-block bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-colors"
+            >
+              {slide.buttonText}
+            </a>
+          </div>
+        </div>
+      ))}
+
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white px-3 py-2 text-3xl rounded-full z-40"
+      >
+        &#10094;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white px-3 py-2 text-3xl rounded-full z-40"
+      >
+        &#10095;
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-40">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`cursor-pointer w-4 h-4 rounded-full transition-colors ${index === currentSlide ? "bg-red-500" : "bg-white/50 hover:bg-red-400"
+              }`}
+          ></span>
         ))}
       </div>
-    </Carousel>
+    </div>
   );
-};
-
-export default CarouselBanner;
+}

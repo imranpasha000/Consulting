@@ -113,7 +113,8 @@
 }
 
 /* Tailwind base styles for full responsiveness and no horizontal overflow */
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -129,8 +130,42 @@ body {
   background: #fff;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 /* Use Tailwind utility classes in all components for layout: w-full, max-w-screen-2xl, px-2/4/8, mx-auto, etc. */
+
+/* Banner responsive styles */
+.banner-container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ensure full screen coverage on all devices */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 100vh;
+    height: 100dvh;
+    /* Dynamic viewport height for mobile */
+  }
+}
+
+/* Fix for mobile viewport issues */
+@supports (height: 100dvh) {
+  .banner-container {
+    height: 100dvh;
+  }
+}

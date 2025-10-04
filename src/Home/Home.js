@@ -8,8 +8,8 @@ import {
   Shield,
   Clock,
 } from "lucide-react";
-import CarouselBanner from "@/components/CarouselBanner";
 import { Button } from "@/components/ui/button";
+import CarouselHero from "@/components/CarouselBanner";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSlider from "@/components/BlogSlider";
 import AboutSection from "@/components/AboutSection";
@@ -83,13 +83,13 @@ const faqData = [
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Featured Carousel */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-5">
-        <CarouselBanner />
+      {/* Hero Carousel Banner */}
+      <section className="w-full pt-16">
+        <CarouselHero />
       </section>
 
       {/* Services Overview */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -100,7 +100,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
+        <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <AboutSection
             title="About HindFilings"
             subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
@@ -129,7 +129,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-8 sm:py-10 mb-5 mt-5 overflow-hidden">
+      <section className="w-full max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-12 sm:py-16 md:py-20 mb-8 mt-8 overflow-hidden">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Your Business Growth Partner
@@ -155,12 +155,12 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <WhyWeAreBest />
       </section>
 
       {/* Payroll Services Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         {/* First Payroll Card */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -244,25 +244,25 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <TestimonialsSection />
       </section>
 
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <QuickLinks />
       </section>
 
       {/* Blog Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <BlogSlider />
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full py-10 bg-gray-50 px-2 sm:px-4 lg:px-8">
+      <section className="max-w-screen-2xl mx-auto w-full py-16 sm:py-20 bg-gray-50 px-2 sm:px-4 lg:px-8">
         <QuoteForm />
       </section>
 
       {/* Call to Action Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-10 mb-5 mt-5">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-16 sm:py-20 mb-8 mt-8">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
@@ -289,7 +289,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <FaqAccordion title="Frequently Asked Questions" faqs={faqData} />
       </section>
     </div>
