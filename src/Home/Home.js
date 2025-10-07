@@ -2,6 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import BlogSlider from "@/components/BlogSlider";
 import CarouselHero from "@/components/CarouselBanner";
 import FaqAccordion from "@/components/FaqAccordion";
+import OneStopSolution from "@/components/Onestopsolution";
 import QuickLinks from "@/components/QuickLinks";
 import QuoteForm from "@/components/QuoteForm";
 import ServicesSection from "@/components/Services-Section";
@@ -101,7 +102,7 @@ const HomePage = () => {
             </Button>
             <Button
               href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="border-2 border-white text-white bg-blue-900 hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               Get Consultation
             </Button>
@@ -112,6 +113,10 @@ const HomePage = () => {
       {/* Why We Are Best */}
       <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
         <WhyWeAreBest />
+      </section>
+
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
+        <OneStopSolution />
       </section>
 
       {/* Payroll Services Section */}
@@ -137,7 +142,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-3xl font-bold text-blue-900 mb-4">
                 Company Name is licensed in VT and specializes in Payroll.
               </h3>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
@@ -160,7 +165,7 @@ const HomePage = () => {
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              <h3 className="text-3xl font-bold text-blue-900 mb-6">
                 Simplify your payroll.
               </h3>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
@@ -238,7 +243,7 @@ const HomePage = () => {
             </Button>
             <Button
               href="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="border-2 border-white text-white bg-blue-900 hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               View All Services
             </Button>

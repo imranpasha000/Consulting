@@ -83,13 +83,13 @@ export default function CarouselHero({
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={slide.buttonLink}
-                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-6 rounded-lg font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="inline-block bg-blue-900 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   {slide.buttonText}
                 </a>
                 <a
                   href="/contact"
-                  className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-6 rounded-lg font-semibold text-lg transition-all duration-300"
+                  className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-4 py-3 rounded-lg font-semibold text-lg transition-all duration-300"
                 >
                   Contact Us
                 </a>
@@ -147,7 +147,7 @@ export default function CarouselHero({
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? "bg-red-600 scale-125"
+                ? "bg-blue-900 scale-125"
                 : "bg-white/50 hover:bg-white/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -158,7 +158,7 @@ export default function CarouselHero({
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 z-40 bg-white/20">
         <div
-          className="h-full bg-red-600 transition-all duration-1000 ease-linear"
+          className="h-full bg-blue-900 transition-all duration-1000 ease-linear"
           style={{
             width: `${(currentSlide + 1) * (100 / slides.length)}%`,
           }}
