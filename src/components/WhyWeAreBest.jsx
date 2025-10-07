@@ -14,7 +14,7 @@ export default function WhyWeAreBest() {
           <h2 className="text-4xl font-bold mt-2 mb-8">Why We Are Best</h2>
 
           {/* Card 1 */}
-          <div className="bg-blue-600 rounded-2xl shadow-md p-6 mb-6 hover:shadow-lg transition">
+          <div className="bg-blue-900 rounded-2xl shadow-md p-6 mb-6 hover:shadow-lg transition">
             <div className="flex items-start gap-4">
               <div className="text-green-500 text-3xl">
                 <FaUserTie />
@@ -33,7 +33,7 @@ export default function WhyWeAreBest() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-blue-600 rounded-2xl shadow-md p-6 mb-6 hover:shadow-lg transition">
+          <div className="bg-blue-900 rounded-2xl shadow-md p-6 mb-6 hover:shadow-lg transition">
             <div className="flex items-start gap-4">
               <div className="text-green-500 text-3xl">
                 <FaHandsHelping />
@@ -52,7 +52,7 @@ export default function WhyWeAreBest() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-blue-600 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+          <div className="bg-blue-900 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
             <div className="flex items-start gap-4">
               <div className="text-green-500 text-3xl">
                 <FaMapMarkedAlt />

@@ -1,61 +1,14 @@
-import React from "react";
-import {
-  ArrowRight,
-  Building2,
-  Users,
-  Calculator,
-  FileText,
-  Shield,
-  Clock,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import CarouselHero from "@/components/CarouselBanner";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import BlogSlider from "@/components/BlogSlider";
 import AboutSection from "@/components/AboutSection";
-import WhyWeAreBest from "@/components/WhyWeAreBest";
+import BlogSlider from "@/components/BlogSlider";
+import CarouselHero from "@/components/CarouselBanner";
+import FaqAccordion from "@/components/FaqAccordion";
 import QuickLinks from "@/components/QuickLinks";
 import QuoteForm from "@/components/QuoteForm";
-import FaqAccordion from "@/components/FaqAccordion";
-
-const services = [
-  {
-    icon: Building2,
-    title: "Company Registration",
-    description:
-      "There are many types of company registration in India. What type of company registration is best, in your case, is one of the most important.",
-  },
-  {
-    icon: Calculator,
-    title: "GST Registration",
-    description:
-      "GST (Goods & Services Tax) Registration is required in India for selling most of the goods and services in India.",
-  },
-  {
-    icon: FileText,
-    title: "ITR Filing",
-    description:
-      "ITR filing is mandatory if your income is above the threshold limit in India. ITR Filing for Salary Income, Business Income, Capital Gain, Interest Income etc.",
-  },
-  {
-    icon: Shield,
-    title: "Trademark Registration",
-    description:
-      "Trademark Registration is the best way to protect your brand name and logo in India.",
-  },
-  {
-    icon: Users,
-    title: "Accounting Services",
-    description:
-      "Accounting is the backbone of business. It is highly recommended for every business.",
-  },
-  {
-    icon: Clock,
-    title: "Auditing Services",
-    description:
-      "There are various types of audit applicability in India like Statutory Audit, Tax Audit, GST Audit etc.",
-  },
-];
+import ServicesSection from "@/components/Services-Section";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import { Button } from "@/components/ui/button";
+import WhyWeAreBest from "@/components/WhyWeAreBest";
+import { ArrowRight, Calculator, Users } from "lucide-react";
 
 const faqData = [
   {
@@ -88,36 +41,32 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Banner */}
-      <section  className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <CarouselHero />
       </section>
 
       {/* Services Overview */}
       <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What We Do
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Complete business solutions under one roof
-          </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl border hover:shadow-xl transition duration-300 w-full"
-            >
-              <service.icon className="w-12 h-12 text-blue-700 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+        <ServicesSection />
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-900 to-green-500 rounded-2xl p-12 text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let us help you with all your business registration and compliance
+              needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                Get Free Consultation
+              </button>
+              <button className="border-2 border-white text-white bg-blue-900 hover:bg-green-500 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                View All Services
+              </button>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -134,26 +83,25 @@ const HomePage = () => {
         />
       </section>
 
-      {/* Business Growth CTA */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gradient-to-r from-blue-900 to-green-600 text-white">
-        <div className="text-center">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="bg-gradient-to-r from-blue-900 to-green-500 rounded-2xl p-8 sm:p-12 text-white text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Your Business Growth Partner
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto">
             HindFilings provides comprehensive business solutions from company
             registration to ongoing compliance
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href="/company-registration"
-              className="w-full sm:w-auto bg-green-600 border-2 border-white text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Business
             </Button>
             <Button
               href="/contact"
-              className="w-full sm:w-auto border-2 border-white text-blue-900 bg-white hover:text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               Get Consultation
             </Button>
@@ -172,7 +120,7 @@ const HomePage = () => {
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative h-64 lg:h-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-pink-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-green-500">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-32 h-32 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center">
@@ -199,7 +147,7 @@ const HomePage = () => {
               </p>
               <Button
                 href="/services/payroll"
-                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600 text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
+                className="inline-flex items-center bg-white hover:bg-green-500 border-2 border-green-500 text-green-500 hover:text-white font-semibold text-lg transition-colors duration-300"
               >
                 Payroll Services
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -224,14 +172,14 @@ const HomePage = () => {
               </p>
               <Button
                 href="/services/payroll"
-                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600 text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
+                className="inline-flex items-center bg-white hover:bg-green-500 border-2 border-green-500 text-green-500 hover:text-white font-semibold text-lg transition-colors duration-300"
               >
                 Payroll Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
             <div className="relative h-64 lg:h-auto order-1 lg:order-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-indigo-600">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-green-500">
                 <div className="absolute inset-0 bg-black/20"></div>
                 {/* Tech/Digital theme */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -272,8 +220,8 @@ const HomePage = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gradient-to-r from-blue-900 to-green-600 text-white">
-        <div className="text-center">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="bg-gradient-to-r from-blue-900 to-green-500 rounded-2xl p-8 sm:p-12 text-white text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
           </h2>
@@ -284,13 +232,13 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href="/contact"
-              className="bg-green-600 text-white hover:bg-white border-2 hover:text-blue-900 border-green-600 hover:border-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Get Free Consultation
             </Button>
             <Button
               href="/services"
-              className="border-2 border-white text-blue-900 bg-white hover:bg-blue-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               View All Services
             </Button>
