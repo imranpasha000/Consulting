@@ -60,36 +60,40 @@ const services = [
 const faqData = [
   {
     question: "What does the Standards e-Pedia subscription include?",
-    answer: "It provides access to all the latest standards in one platform with regular updates."
+    answer:
+      "It provides access to all the latest standards in one platform with regular updates.",
   },
   {
-    question: "Can multiple users access the subscription within our organization?",
-    answer: "Yes, we offer multi-user access with role-based permissions."
+    question:
+      "Can multiple users access the subscription within our organization?",
+    answer: "Yes, we offer multi-user access with role-based permissions.",
   },
   {
     question: "Is it possible to customize the subscription?",
-    answer: "Absolutely, you can tailor your subscription to include only the standards you need."
+    answer:
+      "Absolutely, you can tailor your subscription to include only the standards you need.",
   },
   {
     question: "How does the cost compare to purchasing individually?",
-    answer: "Subscriptions are more cost-effective than buying standards one by one."
+    answer:
+      "Subscriptions are more cost-effective than buying standards one by one.",
   },
   {
     question: "How often are new standards added or updated?",
-    answer: "New standards are added and existing ones updated monthly."
-  }
+    answer: "New standards are added and existing ones updated monthly.",
+  },
 ];
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Banner */}
-      <section className="w-full pt-16">
+      <section  className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <CarouselHero />
       </section>
 
       {/* Services Overview */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -99,18 +103,6 @@ const HomePage = () => {
             Complete business solutions under one roof
           </p>
         </div>
-
-        <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <AboutSection
-            title="About HindFilings"
-            subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
-            description="At our firm in Noida, our Chartered Accountants (CAs) are dedicated to providing comprehensive services that include Company Registration, GST Registration, and ITR Filing. As one of the leading CA firms in Noida, we take pride in upholding the highest ethical standards, ensuring transparency in all our dealings."
-            experienceYears="10"
-            image="/Images/1.webp"
-            buttonText="READ MORE"
-            buttonLink="/about"
-          />
-        </section>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
@@ -129,22 +121,36 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-12 sm:py-16 md:py-20 mb-8 mt-8 overflow-hidden">
+      {/* About Section */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+        <AboutSection
+          title="About HindFilings"
+          subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
+          description="At our firm in Noida, our Chartered Accountants (CAs) are dedicated to providing comprehensive services that include Company Registration, GST Registration, and ITR Filing. As one of the leading CA firms in Noida, we take pride in upholding the highest ethical standards, ensuring transparency in all our dealings."
+          experienceYears="10"
+          image="/Images/1.webp"
+          buttonText="READ MORE"
+          buttonLink="/about"
+        />
+      </section>
+
+      {/* Business Growth CTA */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gradient-to-r from-blue-900 to-green-600 text-white">
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Your Business Growth Partner
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 text-blue-100 max-w-3xl mx-auto px-2">
-            HindFilings provides comprehensive business solutions from company registration to ongoing compliance
+          <p className="text-base sm:text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            HindFilings provides comprehensive business solutions from company
+            registration to ongoing compliance
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               href="/company-registration"
               className="w-full sm:w-auto bg-green-600 border-2 border-white text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               Start Your Business
             </Button>
-
             <Button
               href="/contact"
               className="w-full sm:w-auto border-2 border-white text-blue-900 bg-white hover:text-white hover:bg-blue-800 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
@@ -155,12 +161,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      {/* Why We Are Best */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <WhyWeAreBest />
       </section>
 
       {/* Payroll Services Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
         {/* First Payroll Card */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -192,7 +199,7 @@ const HomePage = () => {
               </p>
               <Button
                 href="/services/payroll"
-                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600  text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
+                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600 text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
               >
                 Payroll Services
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -217,7 +224,7 @@ const HomePage = () => {
               </p>
               <Button
                 href="/services/payroll"
-                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600  text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
+                className="inline-flex items-center bg-white hover:bg-blue-900 border-2 border-green-600 text-blue-900 hover:text-white font-semibold text-lg transition-colors duration-300"
               >
                 Payroll Services
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -244,11 +251,13 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Testimonials */}
       <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <TestimonialsSection />
       </section>
 
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      {/* Quick Links */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
         <QuickLinks />
       </section>
 
@@ -257,12 +266,13 @@ const HomePage = () => {
         <BlogSlider />
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full py-16 sm:py-20 bg-gray-50 px-2 sm:px-4 lg:px-8">
+      {/* Quote Form */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
         <QuoteForm />
       </section>
 
-      {/* Call to Action Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-green-600 text-white py-16 sm:py-20 mb-8 mt-8">
+      {/* Final CTA Section */}
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gradient-to-r from-blue-900 to-green-600 text-white">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
@@ -278,7 +288,6 @@ const HomePage = () => {
             >
               Get Free Consultation
             </Button>
-
             <Button
               href="/services"
               className="border-2 border-white text-blue-900 bg-white hover:bg-blue-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
@@ -288,6 +297,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
       {/* FAQ Section */}
       <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
         <FaqAccordion title="Frequently Asked Questions" faqs={faqData} />
