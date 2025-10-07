@@ -71,7 +71,7 @@ const BlogSlider = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-6 bg-gray-50">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

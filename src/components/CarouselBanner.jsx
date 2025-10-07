@@ -83,13 +83,13 @@ export default function CarouselHero({
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={slide.buttonLink}
-                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-6 rounded-lg font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   {slide.buttonText}
                 </a>
                 <a
                   href="/contact"
-                  className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                  className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-6 rounded-lg font-semibold text-lg transition-all duration-300"
                 >
                   Contact Us
                 </a>

@@ -41,12 +41,12 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Banner */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20">
         <CarouselHero />
       </section>
 
       {/* Services Overview */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20">
         <ServicesSection />
         {/* Bottom CTA */}
         <div className="text-center mt-16">
@@ -71,7 +71,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-white">
         <AboutSection
           title="About HindFilings"
           subtitle="Running a successful business requires expert guidance, especially when it comes to navigating complex financial matters."
@@ -83,7 +83,7 @@ const HomePage = () => {
         />
       </section>
 
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20">
         <div className="bg-gradient-to-r from-blue-900 to-green-500 rounded-2xl p-8 sm:p-12 text-white text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Your Business Growth Partner
@@ -110,12 +110,12 @@ const HomePage = () => {
       </section>
 
       {/* Why We Are Best */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
         <WhyWeAreBest />
       </section>
 
       {/* Payroll Services Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-white">
         {/* First Payroll Card */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -200,27 +200,27 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
         <TestimonialsSection />
       </section>
 
       {/* Quick Links */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-white">
         <QuickLinks />
       </section>
 
       {/* Blog Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
         <BlogSlider />
       </section>
 
       {/* Quote Form */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-white">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-white">
         <QuoteForm />
       </section>
 
       {/* Final CTA Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20">
         <div className="bg-gradient-to-r from-blue-900 to-green-500 rounded-2xl p-8 sm:p-12 text-white text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Business Journey?
@@ -247,7 +247,7 @@ const HomePage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-gray-50">
+      <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20 bg-gray-50">
         <FaqAccordion title="Frequently Asked Questions" faqs={faqData} />
       </section>
     </div>

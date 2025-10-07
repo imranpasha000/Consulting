@@ -56,7 +56,7 @@ const BlogPostPage = ({ params }) => {
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <div className="bg-white border-b">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-blue-900 hover:text-blue-700 transition-colors"
@@ -145,7 +145,7 @@ const BlogPostPage = ({ params }) => {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-white py-16">
+        <section className="bg-white py-6">
           <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Related Articles
@@ -160,7 +160,7 @@ const BlogPostPage = ({ params }) => {
       )}
 
       {/* Newsletter CTA */}
-      <section className="bg-blue-900 py-16">
+      <section className="bg-blue-900 py-6">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated

@@ -20,7 +20,7 @@ const AboutSection = ({
             alt={title}
             className="rounded-lg shadow-lg"
           />
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-r from-green-600 to-blue-900 text-white px-6 py-4 rounded-lg shadow-lg">
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-r from-green-600 to-blue-900 text-white px-6 py-6 rounded-lg shadow-lg">
             <h3 className="text-3xl md:text-4xl font-bold">{experienceYears}+</h3>
             <p className="text-sm md:text-base">Years Experience</p>
           </div>

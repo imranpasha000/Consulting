@@ -23,7 +23,7 @@ const BlogPage = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16">
+      <section className="py-6">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter and Search */}
           <div className="mb-12">
@@ -71,7 +71,7 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-blue-900 py-16">
+      <section className="bg-blue-900 py-6">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated

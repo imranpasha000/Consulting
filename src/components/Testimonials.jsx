@@ -95,7 +95,7 @@ const TestimonialCard = ({ testimonial }) => {
 
 const Testimonials = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-16 px-8">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-6 px-8">
       <div className="max-w-screen-2xl mx-auto w-full">
         {/* Header Section */}
         <div className="text-center mb-16">
