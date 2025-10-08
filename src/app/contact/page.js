@@ -1,4 +1,4 @@
-import ContactPage from "../pages/Contact";
+import ContactPage from "./Contact";
 
 export default function ContactRoute() {
   return <ContactPage />;
