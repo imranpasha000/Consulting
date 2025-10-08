@@ -9,6 +9,7 @@ import ServicesSection from "@/components/Services-Section";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import WhyWeAreBest from "@/components/WhyWeAreBest";
+import { Toaster } from "@/components/ui/sonner";
 import { ArrowRight, Calculator, Users } from "lucide-react";
 
 const faqData = [
@@ -41,6 +42,7 @@ const faqData = [
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Toaster />
       {/* Hero Carousel Banner */}
       <section className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-20">
         <CarouselHero />
