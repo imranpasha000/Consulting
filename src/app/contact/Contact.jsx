@@ -1,6 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -9,6 +21,18 @@ export default function ContactPage() {
     phone: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
+
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+    if (publicKey) {
+      try {
+        emailjs.init(publicKey);
+      } catch (err) {
+        console.warn("EmailJS init failed:", err);
+      }
+    }
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,11 +42,70 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // You can add your form submission logic here
+
+    if (
+      !formData.name ||
+      !formData.phone ||
+      !formData.email ||
+      !formData.message
+    ) {
+      toast.warning("⚠️ Please fill in all required fields.");
+      return;
+    }
+
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+
+    if (!publicKey) {
+      toast.error(
+        "Email public key not configured. Add NEXT_PUBLIC_EMAILJS_USER_ID to your .env and restart the dev server."
+      );
+      return;
+    }
+
+    if (!serviceId || !templateId) {
+      toast.error("Email service not configured. Check your .env values.");
+      return;
+    }
+
+    // Ensure EmailJS is initialized (handles HMR or cases where init didn't run)
+    try {
+      emailjs.init(publicKey);
+    } catch (err) {
+      console.warn("EmailJS init failed on submit:", err);
+    }
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
+    setSending(true);
+    try {
+      await emailjs.send(serviceId, templateId, templateParams);
+      toast.success("Your message has been sent successfully!");
+      handleReset();
+    } catch (err) {
+      console.error("Email send failed:", err);
+      toast.error("Failed to send your message. Please try again later.");
+    } finally {
+      setSending(false);
+    }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
   };
 
   return (
@@ -43,6 +126,7 @@ export default function ContactPage() {
         <div className="relative bg-white rounded-xl shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2 z-10">
           {/* Contact Info Section */}
           <div className="p-8 lg:p-10 relative">
+            {/* Decorative Circle */}
             <div className="absolute w-28 h-28 border-8 border-teal-500 rounded-full bottom-[-70px] right-12 opacity-30 hidden lg:block"></div>
 
             <h3 className="text-2xl font-medium text-teal-500 mb-4">
@@ -50,43 +134,72 @@ export default function ContactPage() {
             </h3>
 
             <p className="text-gray-600 mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              dolorum adipisci recusandae praesentium dicta!
+              We are helping Start-ups in Company Registration and also
+              providing <span className="font-semibold">ONE STOP SOLUTION</span>{" "}
+              for all after company registration compliance.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center text-gray-700">
-                <i className="fas fa-map-marker-alt text-teal-500 w-6"></i>
+                <MapPin className="text-teal-500 w-5 h-5" />
                 <span className="ml-3">
-                  92 Cherry Drive Uniondale, NY 11553
+                  Sector 16, Noida, Uttar Pradesh - 201301
                 </span>
               </div>
 
               <div className="flex items-center text-gray-700">
-                <i className="fas fa-envelope text-teal-500 w-6"></i>
-                <span className="ml-3">lorem@ipsum.com</span>
+                <Mail className="text-teal-500 w-5 h-5" />
+                <span className="ml-3">Help@HindFilings.Com</span>
               </div>
 
               <div className="flex items-center text-gray-700">
-                <i className="fas fa-phone text-teal-500 w-6"></i>
-                <span className="ml-3">123-456-789</span>
+                <Phone className="text-teal-500 w-5 h-5" />
+                <span className="ml-3">+91-9650393998</span>
               </div>
             </div>
 
+            {/* Social Media Links */}
             <div className="pt-6">
               <p className="text-gray-600 mb-3">Connect with us:</p>
               <div className="flex space-x-2">
-                {["facebook-f", "twitter", "instagram", "linkedin-in"].map(
-                  (platform) => (
-                    <a
-                      key={platform}
-                      href="#"
-                      className="w-9 h-9 bg-gradient-to-br from-teal-500 to-teal-700 text-white rounded-lg flex items-center justify-center transition-transform hover:scale-105"
-                    >
-                      <i className={`fab fa-${platform} text-sm`}></i>
-                    </a>
-                  )
-                )}
+                {[
+                  {
+                    name: "Facebook",
+                    icon: <Facebook className="w-4 h-4" />,
+                    link: "https://www.facebook.com/hindfilings",
+                  },
+                  {
+                    name: "Twitter",
+                    icon: <Twitter className="w-4 h-4" />,
+                    link: "https://twitter.com/hindfilings",
+                  },
+                  {
+                    name: "Instagram",
+                    icon: <Instagram className="w-4 h-4" />,
+                    link: "https://www.instagram.com/hindfilings",
+                  },
+                  {
+                    name: "LinkedIn",
+                    icon: <Linkedin className="w-4 h-4" />,
+                    link: "https://www.linkedin.com/company/hindfilings",
+                  },
+                  {
+                    name: "YouTube",
+                    icon: <Youtube className="w-4 h-4" />,
+                    link: "https://www.youtube.com/@hindfilings",
+                  },
+                ].map(({ name, icon, link }) => (
+                  <a
+                    key={name}
+                    href={link}
+                    aria-label={name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 bg-gradient-to-br from-teal-500 to-teal-700 text-white rounded-lg flex items-center justify-center transition-transform hover:scale-105"
+                  >
+                    {icon}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -100,6 +213,7 @@ export default function ContactPage() {
             {/* Triangle decoration */}
             <div className="absolute w-6 h-6 bg-teal-500 transform rotate-45 top-12 -left-3 hidden lg:block"></div>
 
+            {/* Contact Form */}
             <form onSubmit={handleSubmit} className="relative z-10">
               <h3 className="text-2xl font-medium text-white mb-6">
                 Contact us
@@ -111,7 +225,7 @@ export default function ContactPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  label="Username"
+                  label="Full Name"
                 />
 
                 <FloatingInput
@@ -140,9 +254,14 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full bg-white text-teal-500 border-2 border-white py-3 px-6 rounded-lg font-medium mt-6 transition-all hover:bg-transparent hover:text-white"
+                disabled={sending}
+                className={`w-full border-2 border-white py-3 px-6 rounded-lg font-medium mt-6 transition-all ${
+                  sending
+                    ? "bg-white/60 text-teal-500 cursor-not-allowed"
+                    : "bg-white text-teal-500 hover:bg-transparent hover:text-white"
+                }`}
               >
-                Send
+                {sending ? "Sending..." : "Send"}
               </button>
             </form>
           </div>
