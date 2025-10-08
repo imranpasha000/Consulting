@@ -45,7 +45,7 @@ export default function QuoteForm() {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
     if (!serviceId || !templateId) {
-      toast.error("❌ Email service not configured. Check your .env values.");
+      toast.error(" Email service not configured. Check your .env values.");
       return;
     }
 
@@ -59,11 +59,11 @@ export default function QuoteForm() {
     try {
       await emailjs.send(serviceId, templateId, templateParams);
 
-      toast.success("✅ Your message has been sent successfully!");
+      toast.success("Your message has been sent successfully!");
       handleReset();
     } catch (err) {
       console.error("Email send failed:", err);
-      toast.error("❌ Failed to send your message. Please try again later.");
+      toast.error("Failed to send your message. Please try again later.");
     } finally {
       setSending(false);
     }
